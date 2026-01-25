@@ -1,0 +1,169 @@
+import { GraduationCap, Users, Award, BookOpen } from "lucide-react";
+import { motion } from "motion/react";
+
+export function OurFaculty() {
+  const faculty = [
+    { name: "Miss Sadia Khan", position: "Coordinator", color: "#0EA5E9" },
+    { name: "Aroma Maham", position: "Mphil English UCP", color: "#D4AF37" },
+    { name: "Miss Aroosa", position: "Chartered Accountant", color: "#0EA5E9" },
+    { name: "Aroosa", position: "Chartered Accountant", color: "#D4AF37" },
+    { name: "Amina Ali", position: "BS Finance", color: "#0EA5E9" },
+    { name: "Tehmina Mumtaz", position: "Clinical Psychologist", color: "#D4AF37" },
+    { name: "Sana Akhtar", position: "Msc Clinical Psychologist", color: "#0EA5E9" },
+    { name: "Fatima Irfan", position: "Clinical Nutritionist", color: "#D4AF37" },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-white via-[#F0F9FF] to-white">
+      {/* Hero Section */}
+      <section className="relative h-[500px] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              'url("https://images.unsplash.com/photo-1744809482817-9a9d4fc280af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFjaGVyJTIwdGVhY2hpbmclMjBjaGlsZHJlbnxlbnwxfHx8fDE3NjkzMDkwMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080")',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0EA5E9]/80" />
+        <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-white max-w-3xl"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#c4a02d] flex items-center justify-center shadow-lg">
+                <GraduationCap className="w-8 h-8 text-white" />
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-[#0EA5E9] to-[#D4AF37] bg-clip-text text-transparent">
+                Our Faculty
+              </h1>
+            </div>
+            <p className="text-xl md:text-2xl text-[#F0F9FF]">
+              Best Montessori Lahore Early Childhood Education
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="py-20 -mt-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-[#0EA5E9]/20"
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0EA5E9] to-[#0284c7] flex items-center justify-center shadow-lg">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-4xl font-bold text-[#0F172A]">Meet Our Expert Team</h2>
+            </div>
+            <p className="text-gray-700 leading-relaxed text-lg mb-4">
+              Our faculty plays a vital role in project-based learning, integrating art, technology, and creating a supportive environment for all students. We believe in fostering a culture of excellence and innovation in education.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">
+              Each member of our team brings unique expertise and dedication to nurturing young minds, ensuring every child receives personalized attention and the highest quality education.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Faculty Grid - Bento Style */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-center text-[#0F172A] mb-4"
+          >
+            Our Dedicated Team
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-center text-xl text-[#0EA5E9] font-semibold mb-16"
+          >
+            Qualified Professionals Committed to Excellence
+          </motion.p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {faculty.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="bg-white rounded-3xl p-8 shadow-xl border-2 border-transparent hover:border-[#0EA5E9]/50 hover:shadow-2xl transition-all group"
+              >
+                <div
+                  className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+                  style={{ background: `linear-gradient(135deg, ${member.color}, ${member.color}dd)` }}
+                >
+                  <GraduationCap className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-[#0F172A] text-center mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-gray-600 text-center">{member.position}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Our Faculty is Special */}
+      <section className="py-20 bg-gradient-to-b from-[#F0F9FF] to-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Award,
+                title: "Highly Qualified",
+                description: "Our teachers hold advanced degrees and professional certifications in their respective fields.",
+                color: "#0EA5E9",
+              },
+              {
+                icon: BookOpen,
+                title: "Continuous Training",
+                description: "Regular professional development ensures our faculty stays current with best practices.",
+                color: "#D4AF37",
+              },
+              {
+                icon: Users,
+                title: "Student-Centered",
+                description: "Every teacher is committed to personalized attention and student success.",
+                color: "#0EA5E9",
+              },
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-3xl p-8 shadow-xl border border-[#0EA5E9]/20 text-center"
+              >
+                <div
+                  className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg"
+                  style={{ background: `linear-gradient(135deg, ${feature.color}, ${feature.color}dd)` }}
+                >
+                  <feature.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-[#0F172A] mb-4">{feature.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

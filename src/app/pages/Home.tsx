@@ -1,0 +1,663 @@
+import { Link } from "react-router";
+import Slider from "react-slick";
+import { ChevronRight, BookOpen, Brain, Users, Trophy, Microscope, Library, Monitor, Star, GraduationCap, Award, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { SEO } from "@/app/components/SEO";
+import { motion } from "motion/react";
+
+export function Home() {
+  const heroSliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    arrows: false,
+  };
+
+  const mediaSliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  const activities = [
+    { name: "Sensorial Activities", icon: Brain },
+    { name: "Fine Motor Skills", icon: BookOpen },
+    { name: "Gross Motor Skills", icon: Users },
+    { name: "Project-Based Learning", icon: Trophy },
+    { name: "Montessori Education", icon: GraduationCap },
+    { name: "Circle Time", icon: Users },
+    { name: "Phonics Sessions", icon: BookOpen },
+    { name: "Practical Life Skills", icon: Trophy },
+  ];
+
+  const feedbackSliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  const teamMembers = [
+    {
+      name: "Miss Sana Murtaza",
+      role: "CEO & Founder",
+      qualification: "Australian Certified Montessori Teacher",
+      image: "https://images.unsplash.com/photo-1544972917-3529b113a469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5MjQ5MjIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    },
+    {
+      name: "Miss Gul Rukh",
+      role: "Special Education Coordinator",
+      qualification: "M.Ed in Special Education",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5MjQ5MjIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    },
+    {
+      name: "M. Ghulam Murtaza",
+      role: "Speech Therapist",
+      qualification: "MS Speech & Language Therapy",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5MjQ5MjIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    },
+    {
+      name: "Miss Humaira",
+      role: "Montessori Teacher",
+      qualification: "Montessori Diploma",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5MjQ5MjIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      <SEO
+        title="Best School in Lahore - Olive Tree Montessori | Australian Certified Montessori"
+        description="OliveTree Montessori is an Australian and UK-certified Montessori school in Lahore, Pakistan. Best Montessori school offering world-class early childhood education, special education, speech therapy, and ADHD support."
+        keywords="Best School in Lahore, Montessori Lahore, Best Montessori School Lahore, Speech therapy Lahore, ADHD kids school, Australian Montessori Pakistan"
+      />
+
+      {/* Hero Section with Carousel */}
+      <section className="relative h-[600px] md:h-[700px] overflow-hidden">
+        <Slider {...heroSliderSettings} className="h-full">
+          {/* Slide 1 */}
+          <div className="relative h-[600px] md:h-[700px]">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage:
+                  'url("https://images.unsplash.com/photo-1565373086464-c8af0d586c0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNoaWxkcmVuJTIwc2Nob29sfGVufDF8fHx8MTc2OTMxNjc2NHww&ixlib=rb-4.1.0&q=80&w=1080")',
+              }}
+            />
+            <div className="absolute inset-0 bg-[#0F172A]/70" />
+            <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">
+              <div className="text-white max-w-2xl">
+                <div className="inline-block bg-[#D4AF37] px-4 py-2 rounded-full mb-6">
+                  <span className="text-white text-sm font-medium">Australian Certified Montessori</span>
+                </div>
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+                  Best Montessori School in Lahore
+                </h1>
+                <p className="text-xl md:text-2xl mb-6 text-gray-200">
+                  Shaping Future Leaders Through Quality Education
+                </p>
+                <Link
+                  to="/apply-online"
+                  className="inline-flex items-center gap-2 bg-[#0EA5E9] hover:bg-[#0284c7] text-white px-8 py-3 rounded-lg font-medium transition-colors"
+                >
+                  Apply Now <ChevronRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide 2 */}
+          <div className="relative h-[600px] md:h-[700px]">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage:
+                  'url("https://images.unsplash.com/photo-1763310225537-f7161d5c93e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb250ZXNzb3JpJTIwY2xhc3Nyb29tJTIwY2hpbGRyZW58ZW58MXx8fHwxNzY5MzE5NDU2fDA&ixlib=rb-4.1.0&q=80&w=1080")',
+              }}
+            />
+            <div className="absolute inset-0 bg-[#0F172A]/70" />
+            <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center justify-end">
+              <div className="text-white max-w-2xl text-right">
+                <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+                  Special Education Programs
+                </h2>
+                <p className="text-xl md:text-2xl mb-6 text-gray-200">
+                  Speech Therapy, ADHD Support & Down Syndrome Programs
+                </p>
+                <Link
+                  to="/special-education"
+                  className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-[#0F172A] px-8 py-3 rounded-lg font-medium transition-colors"
+                >
+                  Learn More <ChevronRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Slide 3 */}
+          <div className="relative h-[600px] md:h-[700px]">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage:
+                  'url("https://images.unsplash.com/photo-1765133469414-02f4e445df19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzY2hvb2wlMjBjYW1wdXMlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjkzMTk0NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080")',
+              }}
+            />
+            <div className="absolute inset-0 bg-[#0F172A]/70" />
+            <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">
+              <div className="text-white max-w-2xl">
+                <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+                  World-Class Facilities
+                </h2>
+                <p className="text-xl md:text-2xl mb-6 text-gray-200">
+                  Modern Campus with State-of-the-Art Learning Environment
+                </p>
+                <Link
+                  to="/about-us"
+                  className="inline-flex items-center gap-2 bg-[#D4AF37] hover:bg-[#c4a02d] text-white px-8 py-3 rounded-lg font-medium transition-colors"
+                >
+                  About Us <ChevronRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Slider>
+      </section>
+
+      {/* Welcome Section */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100"
+          >
+            <div className="mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-3">Welcome to OliveTree Montessori</h2>
+              <p className="text-[#0EA5E9] text-lg font-semibold">Australian & UK Certified Excellence in Education</p>
+            </div>
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                OliveTree Montessori is an Australian and UK-certified institution, offering a world-class learning experience under the supervision of our highly qualified Australian-trained CEO and dedicated faculty. We nurture future leaders by encouraging young minds to explore, discover, and grow in an environment that prioritizes academic and personal development.
+              </p>
+              <p>
+                Our activity-based learning approach fosters critical thinking, creativity, and problem-solving skills. Character building is a cornerstone of our philosophy, instilling values such as integrity, empathy, and resilience in our students to prepare them for the world with confidence and grace.
+              </p>
+              <p>
+                Our state-of-the-art facilities and rich curriculum provide the ideal setting for holistic growth, balancing intellectual, emotional, and social development. Join the OliveTree Montessori School, and let's shape the leaders of tomorrow.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-16 bg-[#F0F9FF]">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: "15+", label: "Years Experience" },
+              { number: "500+", label: "Happy Students" },
+              { number: "25+", label: "Expert Teachers" },
+              { number: "3", label: "Modern Campuses" },
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-[#0EA5E9] mb-2">{stat.number}</div>
+                <div className="text-gray-700 font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Activities Section */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-3">Our Learning Activities</h2>
+            <p className="text-gray-600 text-lg">Comprehensive Montessori-Based Curriculum</p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {activities.map((activity, index) => {
+              const Icon = activity.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+                >
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-lg bg-[#0EA5E9] flex items-center justify-center">
+                    <Icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-semibold text-[#0F172A] text-sm">{activity.name}</h3>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Dedicated Team */}
+      <section className="py-16 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-3">Our Dedicated Team</h2>
+            <p className="text-gray-600 text-lg">Experienced Educators Committed to Excellence</p>
+          </motion.div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#0F172A] mb-1">{member.name}</h3>
+                  <p className="text-[#0EA5E9] font-semibold mb-2">{member.role}</p>
+                  <p className="text-sm text-gray-600">{member.qualification}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              to="/our-faculty"
+              className="inline-flex items-center gap-2 bg-[#0F172A] hover:bg-[#1e293b] text-white px-8 py-3 rounded-lg font-medium transition-colors"
+            >
+              View All Faculty <ChevronRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Admission Procedure */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-[#0F172A] mb-12"
+          >
+            Admission Procedure
+          </motion.h2>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-8 md:p-10 shadow-lg border border-gray-100"
+            >
+              <p className="text-gray-700 mb-8 text-lg">
+                All applications for the new academic year will be processed starting February 1st. Our admission process includes:
+              </p>
+              <ul className="space-y-5">
+                {[
+                  "Meeting with the director and completing registration",
+                  "Student interview and assessment",
+                  "Parent-student meeting with our academic team",
+                  "Submission of required documentation and records",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-[#0EA5E9] flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/apply-online"
+                className="mt-8 inline-flex items-center gap-2 bg-[#0EA5E9] hover:bg-[#0284c7] text-white px-8 py-3 rounded-lg font-medium transition-colors"
+              >
+                Apply Online <ChevronRight className="w-5 h-5" />
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="rounded-xl overflow-hidden shadow-lg"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1730106451023-f23ee452b3e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzY2hvb2wlMjBmYWNpbGl0aWVzfGVufDF8fHx8MTc2OTI0NjkyMnww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="School Facilities"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* CEO's Message */}
+      <section className="py-16 md:py-20 bg-[#F0F9FF]">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-xl p-8 md:p-12 shadow-lg border border-gray-100"
+          >
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-14 h-14 rounded-lg bg-[#D4AF37] flex items-center justify-center">
+                <Award className="w-7 h-7 text-white" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">CEO's Message</h2>
+            </div>
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                Welcome to OliveTree Montessori Lahore, where we proudly offer a distinguished early years education certified by Australian and UK standards. At OliveTree Montessori, we inspire and empower students to be lifelong learners, critical thinkers, and valuable global citizens.
+              </p>
+              <p>
+                Our Montessori curriculum fosters strong, independent students who uphold Pakistani values and excel academically. We create a nurturing environment promoting academic excellence and character development, ensuring every child acquires the skills for lifelong success.
+              </p>
+              <p>
+                Our students explore their interests and objectives, gaining a comprehensive understanding of the world. Through individual learning, cooperative projects, and enriching extracurricular activities, we encourage students to take ownership of their educational journey and become contributing members of society.
+              </p>
+              <p className="text-[#0EA5E9] font-semibold text-lg mt-6">
+                Join OliveTree Montessori School in Lahore, where your child's education will be enriched with independence, excellence, and global awareness.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Facilities Section */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-[#0F172A] mb-12"
+          >
+            Our Facilities
+          </motion.h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Monitor,
+                title: "Computer Lab",
+                description: "Modern computer labs equipped with the latest technology for students to develop digital literacy and technical skills.",
+              },
+              {
+                icon: Microscope,
+                title: "Science Lab",
+                description: "Fully equipped science laboratory providing hands-on experience with scientific experiments and research.",
+              },
+              {
+                icon: Library,
+                title: "Books & Library",
+                description: "Extensive library collection with books and digital resources to support learning and encourage reading habits.",
+              },
+            ].map((facility, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow border border-gray-100"
+              >
+                <div className="w-16 h-16 mb-6 rounded-lg bg-[#0EA5E9] flex items-center justify-center">
+                  <facility.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-[#0F172A] mb-4">{facility.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{facility.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Media Gallery Carousel */}
+      <section className="py-16 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-[#0F172A] mb-12"
+          >
+            Media Gallery
+          </motion.h2>
+          <Slider {...mediaSliderSettings}>
+            {[
+              "https://images.unsplash.com/photo-1565373086464-c8af0d586c0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNoaWxkcmVuJTIwc2Nob29sfGVufDF8fHx8MTc2OTMxNjc2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1763310225537-f7161d5c93e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb250ZXNzb3JpJTIwY2xhc3Nyb29tJTIwbGVhcm5pbmd8ZW58MXx8fHwxNzY5MzE4MzkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1730106451023-f23ee452b3e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzY2hvb2wlMjBmYWNpbGl0aWVzfGVufDF8fHx8MTc2OTI0NjkyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1626402570254-3e3d1790e14f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc2OTMwODI4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1589104759909-e355f8999f7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGVlY2glMjB0aGVyYXB5JTIwY2hpbGRyZW58ZW58MXx8fHwxNzY5MzE2NzYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1761208663281-619e6532aff3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHBsYXlpbmclMjBzY2hvb2x8ZW58MXx8fHwxNzY5MzIwNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1630637991997-1cd9c8b41ce1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvdXRkb29yJTIwcGxheWdyb3VuZCUyMGtpZHN8ZW58MXx8fHwxNzY5MzIwNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1629652486845-eb09110a62b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnQlMjBjbGFzc3Jvb20lMjBjaGlsZHJlbnxlbnwxfHx8fDE3NjkzMjA1MTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1758612214848-04e700d192ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMGNsYXNzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzY5MzIwNTE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1666888735993-6ed30a900f36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWFkaW5nJTIwYm9va3MlMjBjaGlsZHJlbnxlbnwxfHx8fDE3NjkzMjA1MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1758685734153-132c8620c1bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwZXhwZXJpbWVudCUyMGtpZHN8ZW58MXx8fHwxNzY5MzIwNTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+              "https://images.unsplash.com/photo-1761039808159-f02b58f07032?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhY3Rpdml0eSUyMGNoaWxkcmVufGVufDF8fHx8MTc2OTMyMDUxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+            ].map((img, idx) => (
+              <div key={idx} className="px-3">
+                <div className="aspect-square rounded-xl overflow-hidden shadow-md">
+                  <img src={img} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover" />
+                </div>
+              </div>
+            ))}
+          </Slider>
+          <div className="text-center mt-12">
+            <Link
+              to="/gallery"
+              className="inline-flex items-center gap-2 bg-[#0EA5E9] hover:bg-[#0284c7] text-white px-8 py-3 rounded-lg font-medium transition-colors"
+            >
+              View Full Gallery <ChevronRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Parent Feedback */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-3">Parent Feedback</h2>
+            <p className="text-gray-600 text-lg">What Parents Say About OliveTree Montessori</p>
+          </motion.div>
+          <Slider {...feedbackSliderSettings}>
+            {[
+              {
+                name: "Ayesha Khan",
+                quote: "OliveTree has transformed my child's learning experience. The teachers are exceptional and truly care about each student's development.",
+                rating: 5,
+              },
+              {
+                name: "Ali Ahmed",
+                quote: "Best Montessori school in Lahore. The facilities are excellent and the staff is professional. Highly recommend to all parents.",
+                rating: 5,
+              },
+              {
+                name: "Fatima Malik",
+                quote: "The special education program is outstanding. My son has shown tremendous progress in speech therapy and overall development.",
+                rating: 5,
+              },
+              {
+                name: "Hassan Raza",
+                quote: "Professional staff, great facilities, and a nurturing environment. My daughter loves going to school every day.",
+                rating: 5,
+              },
+              {
+                name: "Sarah Jamil",
+                quote: "Australian certified Montessori education in Lahore! The quality of teaching and care is exceptional.",
+                rating: 5,
+              },
+            ].map((feedback, idx) => (
+              <div key={idx} className="px-3">
+                <div className="bg-white rounded-xl p-8 shadow-md border border-gray-100 h-full">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(feedback.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-[#D4AF37] fill-[#D4AF37]" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-6 leading-relaxed">\"{feedback.quote}\"</p>
+                  <p className="font-semibold text-[#0F172A]">— {feedback.name}</p>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </section>
+
+      {/* Certificates & Accreditations */}
+      <section className="py-16 md:py-20 bg-[#F0F9FF]">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-3">Our Certifications & Accreditations</h2>
+            <p className="text-gray-600 text-lg">Recognized Excellence in Montessori Education</p>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Australian Montessori Certification",
+                image: "https://images.unsplash.com/photo-1715173679369-18006e84d6a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZGlwbG9tYXxlbnwxfHx8fDE3NjkzMTk0NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+              },
+              {
+                title: "UK Education Standards",
+                image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZGlwbG9tYXxlbnwxfHx8fDE3NjkzMTk0NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+              },
+              {
+                title: "Special Education Accreditation",
+                image: "https://images.unsplash.com/photo-1604480132715-4c264678c6f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZGlwbG9tYXxlbnwxfHx8fDE3NjkzMTk0NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+              },
+            ].map((cert, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#0F172A] text-center">{cert.title}</h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-16 md:py-20 bg-[#0F172A]">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Join OliveTree Montessori?</h2>
+            <p className="text-xl text-gray-300 mb-8">Schedule a visit to our campus and experience our world-class facilities</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/apply-online"
+                className="inline-flex items-center justify-center gap-2 bg-[#0EA5E9] hover:bg-[#0284c7] text-white px-8 py-3 rounded-lg font-medium transition-colors"
+              >
+                Apply Now <ChevronRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#0F172A] px-8 py-3 rounded-lg font-medium transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

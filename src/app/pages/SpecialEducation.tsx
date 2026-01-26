@@ -232,15 +232,6 @@ export function SpecialEducation() {
                   </div>
                 ))}
               </div>
-              
-              <div className="relative rounded-2xl overflow-hidden shadow-xl mt-8 h-64 md:h-80 lg:h-auto">
-                <img 
-                  src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1080" 
-                  alt="Special Education Classroom" 
-                  className="w-full h-full object-cover"
-                />
-                 <div className="absolute inset-0 bg-[#0EA5E9]/10"></div>
-              </div>
             </motion.div>
           </div>
           

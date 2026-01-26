@@ -146,7 +146,7 @@ export function Home() {
       />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-slate-50">
+      <section className="relative pt-8 pb-16 md:pt-24 md:pb-24 overflow-hidden bg-slate-50">
         {/* Decorative Elements */}
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-100 blur-3xl opacity-50" />
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-yellow-100 blur-3xl opacity-50" />

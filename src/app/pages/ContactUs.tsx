@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Send, Clock, Navigation } from "lucide-react";
 import { motion } from "motion/react";
+import hero from "@/assets/hero-1.jpeg";
 
 export function ContactUs() {
   const [formData, setFormData] = useState({
@@ -60,7 +61,7 @@ export function ContactUs() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url("https://images.unsplash.com/photo-1626402570254-3e3d1790e14f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc2OTMwODI4MXww&ixlib=rb-4.1.0&q=80&w=1080")',
+              `url(${hero})`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0EA5E9]/80" />

@@ -1,6 +1,10 @@
 import { Target, Eye, Award, Users, TrendingUp, BookOpen, Globe, Heart, CheckCircle2 } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
+import hero from "@/assets/hero-1.jpeg";
+import hero3 from "@/assets/hero-3.jpeg";
+import mission from "@/assets/WhatsApp Image 2026-01-26 at 12.21.57 PM (1).jpeg";
+import vision from "@/assets/WhatsApp Image 2026-01-26 at 12.21.59 PM.jpeg";
 
 export function AboutUs() {
   const [counts, setCounts] = useState({
@@ -52,7 +56,7 @@ export function AboutUs() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url("https://images.unsplash.com/photo-1626402570254-3e3d1790e14f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc2OTMwODI4MXww&ixlib=rb-4.1.0&q=80&w=1080")',
+              `url(${hero})`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/90 to-[#0EA5E9]/85" />
@@ -155,7 +159,7 @@ export function AboutUs() {
               Best School in Pakistan
             </h2>
             <p className="text-xl text-[#0EA5E9] font-semibold mb-6">
-              Olive Tree Montessori School is the Best School near me.
+              Olive Tree Montessori & School is the Best School near me.
             </p>
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
               <p>
@@ -238,7 +242,7 @@ export function AboutUs() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1763310225537-f7161d5c93e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMGxlYXJuaW5nJTIwbW9udGVzc29yaXxlbnwxfHx8fDE3NjkzMTgxNzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={hero3}
                   alt="Children Learning"
                   className="w-full h-full object-cover"
                 />
@@ -308,7 +312,7 @@ export function AboutUs() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1731679802944-a063d5f74ee8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb25hbCUyMHZpc2lvbiUyMG1pc3Npb258ZW58MXx8fHwxNzY5MzE4MTc2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={mission}
                   alt="Our Mission"
                   className="w-full h-[400px] object-cover"
                 />
@@ -325,7 +329,7 @@ export function AboutUs() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1600446020369-d5a277906615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwdmFsdWVzJTIwY29sbGFib3JhdGlvbnxlbnwxfHx8fDE3NjkzMTgxNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={vision}
                   alt="Our Vision"
                   className="w-full h-[400px] object-cover"
                 />

@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router";
 import { Menu, X, GraduationCap, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import logo from "@/assets/logo.png";
 
 export function Header() {
   const location = useLocation();
@@ -66,16 +67,17 @@ export function Header() {
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-20">
+
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-xl bg-[#0F172A] flex items-center justify-center">
-                <GraduationCap className="w-7 h-7 text-[#D4AF37]" />
+              <div className="w-12 h-12 rounded bg-white flex items-center justify-center overflow-hidden">
+                <img src={logo} alt="Olive Tree Montessori" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h1 className="text-xl font-semibold text-[#0F172A]">
                   Olive Tree
                 </h1>
-                <p className="text-xs text-gray-500">Montessori School</p>
+                <p className="text-xs text-gray-500">Montessori & School</p>
               </div>
             </Link>
 

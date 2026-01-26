@@ -1,80 +1,54 @@
 import { motion } from "motion/react";
 import { Camera, Image as ImageIcon } from "lucide-react";
 
+import artClassroom from "@/assets/art-clasroom.jpeg";
+import cafeteria from "@/assets/cafeteria.jpeg";
+import childrenPlaying from "@/assets/childern-playing.jpeg";
+import happyChildren from "@/assets/happy-childern.jpeg";
+import lab from "@/assets/lab.jpeg";
+import musicClass from "@/assets/music-class.jpeg";
+import readingTime from "@/assets/reading-time.jpeg";
+import sportsActivities from "@/assets/sports-activities.jpeg";
+import activity from "@/assets/classroom-activity.jpeg"
+
 export function Gallery() {
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1659048357737-e6a8cff2bd77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb250ZXNzb3JpJTIwc2Nob29sJTIwY2hpbGRyZW4lMjBsZWFybmluZ3xlbnwxfHx8fDE3NjkzMTY3NjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Montessori Learning",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1744809482817-9a9d4fc280af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFjaGVyJTIwdGVhY2hpbmclMjBjaGlsZHJlbnxlbnwxfHx8fDE3NjkzMDkwMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Teacher Teaching",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1589104759909-e355f8999f7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGVlY2glMjB0aGVyYXB5JTIwY2hpbGRyZW58ZW58MXx8fHwxNzY5MzE2NzYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Speech Therapy",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1557734864-c78b6dfef1b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGFzc3Jvb20lMjBhY3Rpdml0aWVzJTIwa2lkc3xlbnwxfHx8fDE3NjkzMTY3NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Classroom Activities",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1694351075627-ed3aeacdc417?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwbGFiJTIwc2Nob29sfGVufDF8fHx8MTc2OTMxNjc2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Science Lab",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1632217138608-66217da0142f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsaWJyYXJ5JTIwYm9va3MlMjBzY2hvb2x8ZW58MXx8fHwxNzY5MzE2NzYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Library",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1766297247924-6638d54e7c89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMGxhYiUyMHN0dWRlbnRzfGVufDF8fHx8MTc2OTI0NTU4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Computer Lab",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1565373086464-c8af0d586c0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNoaWxkcmVuJTIwc2Nob29sfGVufDF8fHx8MTc2OTMxNjc2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      url: happyChildren,
       title: "Happy Children",
     },
     {
-      url: "https://images.unsplash.com/photo-1761208663281-619e6532aff3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHBsYXlpbmclMjBzY2hvb2x8ZW58MXx8fHwxNzY5MzIwNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      url: activity,
+      title: "Classroom Activity",
+    },
+    {
+      url: childrenPlaying,
       title: "Children Playing",
     },
     {
-      url: "https://images.unsplash.com/photo-1630637991997-1cd9c8b41ce1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvdXRkb29yJTIwcGxheWdyb3VuZCUyMGtpZHN8ZW58MXx8fHwxNzY5MzIwNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Outdoor Playground",
+       url: sportsActivities,
+       title: "Sports Activities",
     },
     {
-      url: "https://images.unsplash.com/photo-1629652486845-eb09110a62b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnQlMjBjbGFzc3Jvb20lMjBjaGlsZHJlbnxlbnwxfHx8fDE3NjkzMjA1MTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Art Classroom",
+      url: lab,
+      title: "Science Lab",
     },
     {
-      url: "https://images.unsplash.com/photo-1758612214848-04e700d192ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMGNsYXNzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzY5MzIwNTE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      url: musicClass,
       title: "Music Class",
     },
     {
-      url: "https://images.unsplash.com/photo-1666888735993-6ed30a900f36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWFkaW5nJTIwYm9va3MlMjBjaGlsZHJlbnxlbnwxfHx8fDE3NjkzMjA1MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      url: readingTime,
       title: "Reading Time",
     },
     {
-      url: "https://images.unsplash.com/photo-1758685734153-132c8620c1bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwZXhwZXJpbWVudCUyMGtpZHN8ZW58MXx8fHwxNzY5MzIwNTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Science Experiments",
+      url: artClassroom,
+      title: "Art Classroom",
     },
     {
-      url: "https://images.unsplash.com/photo-1761039808159-f02b58f07032?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhY3Rpdml0eSUyMGNoaWxkcmVufGVufDF8fHx8MTc2OTMyMDUxOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Sports Activities",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1567746455504-cb3213f8f5b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraW5kZXJnYXJ0ZW4lMjBjbGFzc3Jvb218ZW58MXx8fHwxNzY5MjkxNjQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Kindergarten Classroom",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1564429238817-393bd4286b2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVzY2hvb2wlMjBsZWFybmluZ3xlbnwxfHx8fDE3NjkzMjA1MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Preschool Learning",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1627561978149-e966316a632b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBjYWZldGVyaWF8ZW58MXx8fHwxNzY5MzIwNTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      url: cafeteria,
       title: "School Cafeteria",
-    },
+   }
   ];
 
   return (
@@ -85,7 +59,7 @@ export function Gallery() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url("https://images.unsplash.com/photo-1565373086464-c8af0d586c0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNoaWxkcmVuJTIwc2Nob29sfGVufDF8fHx8MTc2OTMxNjc2NHww&ixlib=rb-4.1.0&q=80&w=1080")',
+              `url(${happyChildren})`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0EA5E9]/80" />
@@ -138,10 +112,10 @@ export function Gallery() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 className={`relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all group cursor-pointer ${
-                  index === 0 || index === 4 ? "md:col-span-2 md:row-span-2" : ""
+                  index === 0 || index === 4 || index === 8 ? "md:col-span-2 md:row-span-2" : ""
                 }`}
               >
-                <div className={`relative ${index === 0 || index === 4 ? "h-[500px]" : "h-[300px]"}`}>
+                <div className={`relative ${index === 0 || index === 4 || index === 8 ? "h-[500px]" : "h-[300px]"}`}>
                   <img
                     src={image.url}
                     alt={image.title}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Send, FileCheck, Award } from "lucide-react";
 import { motion } from "motion/react";
+import hero from "@/assets/hero.jpeg";
 
 export function ApplyOnline() {
   const [formData, setFormData] = useState({
@@ -20,7 +21,24 @@ export function ApplyOnline() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    
+    const message = `*New Admission Application*
+---------------------------
+*Campus:* ${formData.campus}
+*Student Name:* ${formData.firstName} ${formData.lastName}
+*Age:* ${formData.age}
+*Registration For:* ${formData.registrationFor}
+*Gender:* ${formData.gender}
+*Nationality:* ${formData.nationality}
+*Religion:* ${formData.religion}
+*Special Needs:* ${formData.hasIssue === 'yes' ? 'Yes' : 'No'}
+${formData.hasIssue === 'yes' ? `*Issue Details:* ${formData.issueDetails}` : ''}`.trim();
+
+    const phoneNumber = "923091096029";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
+
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 5000);
   };
@@ -40,7 +58,7 @@ export function ApplyOnline() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url("https://images.unsplash.com/photo-1626402570254-3e3d1790e14f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc2OTMwODI4MXww&ixlib=rb-4.1.0&q=80&w=1080")',
+              `url(${hero})`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0EA5E9]/80" />
@@ -60,7 +78,7 @@ export function ApplyOnline() {
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-[#F0F9FF] mb-4">
-              Join the Best Montessori School in Lahore
+              Join the Best Montessori & School in Lahore
             </p>
             <p className="text-lg text-[#0EA5E9]">
               Start your child's journey to excellence today
@@ -170,10 +188,14 @@ export function ApplyOnline() {
                     className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-[#0EA5E9] focus:ring-4 focus:ring-[#0EA5E9]/10 outline-none transition-all bg-white"
                   >
                     <option value="">Select program</option>
-                    <option value="playgroup">Playgroup</option>
-                    <option value="nursery">Nursery</option>
-                    <option value="kg">KG</option>
-                    <option value="prep">Prep</option>
+                    <option value="early-year-1">Early Year 1 ( Age 2+)</option>
+                    <option value="early-year-2">Early Year 2 ( Age 3+)</option>
+                    <option value="early-year-3">Early Year 3 ( Age 4+)</option>
+                    <option value="grade-1">Grade 1 ( Age 6+)</option>
+                    <option value="grade-2">Grade 2 ( Age 7+)</option>
+                    <option value="grade-3">Grade 3 ( Age 8+)</option>
+                    <option value="grade-4">Grade 4 ( Age 9+)</option>
+                    <option value="grade-5">Grade 5 ( Age 10+)</option>
                     <option value="special-education">Special Education</option>
                   </select>
                 </div>

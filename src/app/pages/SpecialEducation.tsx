@@ -2,6 +2,15 @@ import { Link } from "react-router";
 import { ChevronRight, Award, Heart, Brain, Target, Users, Sparkles, CheckCircle2, Play, Music } from "lucide-react";
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
+import cc from "@/assets/ceochairman.jpg";
+import hero from "@/assets/hero.jpeg";
+import video1 from "@/assets/WhatsApp Video 2026-01-26 at 12.21.45 PM.mp4";
+import video2 from "@/assets/WhatsApp Video 2026-01-26 at 12.22.00 PM.mp4";
+import video3 from "@/assets/WhatsApp Video 2026-01-26 at 12.22.01 PM.mp4";
+import video4 from "@/assets/vedio-1.mp4";
+import classroomActivity from "@/assets/classroom-activity.jpeg";
+import artClassroom from "@/assets/art-clasroom.jpeg";
+import lab from "@/assets/lab.jpeg";
 
 export function SpecialEducation() {
   const services = [
@@ -75,22 +84,15 @@ export function SpecialEducation() {
     "Miss Yusra Sajjad",
   ];
 
-  // YouTube Video IDs
-  const youtubeVideos = [
-    { id: "dQw4w9WgXcQ", title: "Speech Therapy Session" },
-    { id: "9bZkp7q19f0", title: "ADHD Support Program" },
-    { id: "3JZ_D3ELwOQ", title: "Down Syndrome Learning" },
-    { id: "YQHsXMglC9A", title: "Montessori Activities" },
-    { id: "kJQP7kiw5Fk", title: "Special Education Success Stories" },
-    { id: "hT_nvWreIhg", title: "Therapy Programs Overview" },
+  // Local Videos
+  const videos = [
+    { id: 1, title: "Speech Therapy Session", src: video1 },
+    { id: 2, title: "ADHD Support Program", src: video2 },
+    { id: 3, title: "Down Syndrome Learning", src: video3 },
+    { id: 4, title: "Montessori Activities", src: video4 },
   ];
 
-  const [currentVideo, setCurrentVideo] = useState(youtubeVideos[0]);
-
-  useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * youtubeVideos.length);
-    setCurrentVideo(youtubeVideos[randomIndex]);
-  }, []);
+  const [currentVideo, setCurrentVideo] = useState(videos[0]);
 
   return (
     <div className="min-h-screen bg-white">
@@ -99,8 +101,7 @@ export function SpecialEducation() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              'url("https://images.unsplash.com/photo-1589104759909-e355f8999f7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGVlY2glMjB0aGVyYXB5JTIwY2hpbGRyZW58ZW58MXx8fHwxNzY5MzE2NzYyfDA&ixlib=rb-4.1.0&q=80&w=1080")',
+            backgroundImage: `url(${hero})`,
           }}
         />
         <div className="absolute inset-0 bg-[#0F172A]/75" />
@@ -168,7 +169,7 @@ export function SpecialEducation() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] max-w-md mx-auto">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw3fHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBwb3J0cmFpdHxlbnwxfHx8fDE3Njk0MDkwNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={cc}
                   alt="Chairman Special Education"
                   className="w-full h-full object-cover"
                 />
@@ -256,6 +257,80 @@ export function SpecialEducation() {
         </div>
       </section>
 
+      {/* Featured Programs (Styled Cards) */}
+      <section className="py-20 bg-[#001E3C] relative overflow-hidden">
+        {/* Background Decorative Dotted Lines */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+           <svg width="100%" height="100%">
+             <pattern id="pattern-circles" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+               <circle cx="2" cy="2" r="1" className="text-white fill-current" />
+             </pattern>
+             <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
+           </svg>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+              
+              {/* Card 1: ADHD Students - Light Blue */}
+              <motion.div 
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="relative mt-12 bg-[#22D3EE] rounded-[2.5rem] p-8 pb-12 text-center"
+              >
+                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full border-[6px] border-[#001E3C] overflow-hidden bg-white shadow-lg">
+                    <img src={classroomActivity} alt="ADHD Students" className="w-full h-full object-cover" />
+                 </div>
+                 <h3 className="text-2xl font-bold text-white mt-16 mb-4">ADHD Students</h3>
+                 <p className="text-white text-sm leading-relaxed opacity-95 font-medium">
+                   Olive Tree ADHD offers Behavioral interventions, counseling, and teacher training, to address the unique needs of students with Attention Deficit Hyperactivity Disorder.
+                 </p>
+                  {/* Decorative dashed line around card */}
+                 <div className="absolute top-2 bottom-2 left-2 right-2 rounded-[2.2rem] border-2 border-dashed border-white/30 pointer-events-none"></div>
+              </motion.div>
+
+              {/* Card 2: Down Syndrome - Purple */}
+              <motion.div 
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="relative mt-12 bg-[#A78BFA] rounded-[2.5rem] p-8 pb-12 text-center"
+              >
+                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full border-[6px] border-[#001E3C] overflow-hidden bg-white shadow-lg">
+                    <img src={artClassroom} alt="Down Syndrome" className="w-full h-full object-cover" />
+                 </div>
+                 <h3 className="text-2xl font-bold text-white mt-16 mb-4">Down Syndrome</h3>
+                 <p className="text-white text-sm leading-relaxed opacity-95 font-medium">
+                   Speech therapy, occupational therapy, and social-emotional support, to meet the unique educational and developmental needs of students with Down syndrome.
+                 </p>
+                 <div className="absolute top-2 bottom-2 left-2 right-2 rounded-[2.2rem] border-2 border-dashed border-white/30 pointer-events-none"></div>
+              </motion.div>
+
+              {/* Card 3: Learning Therapy - Yellow/Orange */}
+              <motion.div 
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="relative mt-12 bg-[#F59E0B] rounded-[2.5rem] p-8 pb-12 text-center"
+              >
+                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full border-[6px] border-[#001E3C] overflow-hidden bg-white shadow-lg">
+                    <img src={lab} alt="Learning Therapy" className="w-full h-full object-cover" />
+                 </div>
+                 <h3 className="text-2xl font-bold text-white mt-16 mb-4">Learning Therapy</h3>
+                 <p className="text-white text-sm leading-relaxed opacity-95 font-medium">
+                   Olive Tree services offer personalized interventions and strategies to support individuals in overcoming learning challenges, enhancing cognitive skills, and achieving academic success.
+                 </p>
+                 <div className="absolute top-2 bottom-2 left-2 right-2 rounded-[2.2rem] border-2 border-dashed border-white/30 pointer-events-none"></div>
+              </motion.div>
+
+           </div>
+        </div>
+      </section>
+
       {/* Our Specialized Services (Grid View) */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
@@ -316,26 +391,26 @@ export function SpecialEducation() {
             Watch our students' success stories and therapy sessions
           </motion.p>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-8">
             {/* Main Featured Video */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-2"
             >
               <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                <div className="aspect-video">
-                  <iframe
+                <div className="aspect-video relative">
+                  <video
+                    key={currentVideo.src} // Add key to force reload when source changes
                     width="100%"
                     height="100%"
-                    src={`https://www.youtube.com/embed/${currentVideo.id}`}
-                    title={currentVideo.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  ></iframe>
+                    controls
+                    autoPlay
+                    className="w-full h-full object-cover"
+                  >
+                    <source src={currentVideo.src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-[#0F172A]">{currentVideo.title}</h3>
@@ -345,33 +420,28 @@ export function SpecialEducation() {
             </motion.div>
 
             {/* Video Grid */}
-            {youtubeVideos.slice(0, 4).map((video, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-gray-100 cursor-pointer"
-                onClick={() => setCurrentVideo(video)}
-              >
-                <div className="aspect-video relative group">
-                  <img
-                    src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                    alt={video.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">
-                      <Play className="w-8 h-8 text-[#0EA5E9] ml-1" />
-                    </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {videos.map((video, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-gray-100 cursor-pointer ${currentVideo.id === video.id ? 'ring-2 ring-[#0EA5E9]' : ''}`}
+                  onClick={() => setCurrentVideo(video)}
+                >
+                  <div className="aspect-video relative group bg-gray-900 flex items-center justify-center">
+                     <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 opacity-80" />
+                     <Play className="w-8 h-8 text-white/80 relative z-10 group-hover:scale-110 transition-transform" />
+                     <div className="absolute bottom-2 right-2 px-2 py-1 bg-black/60 text-white text-[10px] rounded">Video</div>
                   </div>
-                </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-[#0F172A]">{video.title}</h3>
-                </div>
-              </motion.div>
-            ))}
+                  <div className="p-3">
+                    <h3 className="font-semibold text-[#0F172A] text-sm line-clamp-1">{video.title}</h3>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           <div className="text-center mt-12">

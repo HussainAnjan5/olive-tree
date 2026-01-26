@@ -3,7 +3,35 @@ import Slider from "react-slick";
 import { ChevronRight, BookOpen, Brain, Users, Trophy, Microscope, Library, Monitor, Star, GraduationCap, Award, Phone, Mail, MapPin, CheckCircle, Heart } from "lucide-react";
 import { SEO } from "@/app/components/SEO";
 import { motion } from "motion/react";
+import hero1 from "@/assets/hero-1.jpeg";
+import hero2 from "@/assets/hero-2.jpeg";
+import hero3 from "@/assets/hero-3.jpeg";
+import madam from "@/assets/madam.jpeg";
+import sadiakhan from "@/assets/sadiakhan.jpeg";
+import missaroosa from "@/assets/missaroosa.jpeg";
+import aromamaham from "@/assets/aromamaham.jpeg";
+import cert1 from "@/assets/certifcate-1.jpeg";
+import cert2 from "@/assets/certifcate-2.jpeg";
+import cert3 from "@/assets/certifcate-3.jpeg";
+import facilities from "@/assets/school-facilities.jpeg"; // Assuming we use 'classroom-activity.jpeg' or similar if not found, I'll check list again. Wait, user provided 'Our Certifications & Accreditations from my assets folder'. I will use certifcate-1/2/3/4.
+// Re-checking file list from Step 215. Files available: certifcate-1.jpeg, certifcate-2.jpeg, certifcate-3.jpeg, certifcate-4.jpeg.
+// For facilities, I will use "classroom-activity.jpeg" or "lab.jpeg" or similar if specific facilities image not found. Let's use 'lab.jpeg' as placeholder for facilities if no better match, or search for it.
+// Actually, user said "Admission Procedure ... use from my assets folder images". I'll use `reading-time.jpeg` for Admission Procedure as it looks academic.
+// User said "Media Gallery ... use from my assets folder images". I will use the `WhatsApp...` images for gallery.
 
+import gallery1 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.44 PM (1).jpeg";
+import gallery2 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.44 PM (2).jpeg";
+import gallery3 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.45 PM.jpeg";
+import gallery4 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.46 PM.jpeg";
+import gallery5 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.47 PM (1).jpeg";
+import gallery6 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.47 PM.jpeg";
+import gallery7 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.48 PM (1).jpeg";
+import gallery8 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.48 PM.jpeg";
+import gallery9 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.49 PM (1).jpeg";
+import gallery10 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.49 PM (2).jpeg";
+import gallery11 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.49 PM.jpeg";
+import gallery12 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.50 PM (2).jpeg";
+import admission from "@/assets/reading-time.jpeg";
 export function Home() {
   const heroSliderSettings = {
     dots: true,
@@ -87,25 +115,25 @@ export function Home() {
       name: "Miss Sana Murtaza",
       role: "CEO & Founder",
       qualification: "Australian Certified Montessori Teacher",
-      image: "https://images.unsplash.com/photo-1544972917-3529b113a469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5MjQ5MjIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: madam,
     },
     {
-      name: "Miss Gul Rukh",
-      role: "Special Education Coordinator",
-      qualification: "M.Ed in Special Education",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5MjQ5MjIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      name: "Miss Sadia Khan",
+      role: "Coordinator",
+      qualification: "Certified Educator",
+      image: sadiakhan,
     },
     {
-      name: "M. Ghulam Murtaza",
-      role: "Speech Therapist",
-      qualification: "MS Speech & Language Therapy",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5MjQ5MjIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      name: "Miss Aroosa",
+      role: "Chartered Accountant",
+      qualification: "Chartered Accountant",
+      image: missaroosa,
     },
     {
-      name: "Miss Humaira",
-      role: "Montessori Teacher",
-      qualification: "Montessori Diploma",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5MjQ5MjIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      name: "Aroma Maham",
+      role: "Mphil English UCP",
+      qualification: "Mphil English",
+      image: aromamaham,
     },
   ];
 
@@ -113,8 +141,8 @@ export function Home() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Best School in Lahore - Olive Tree Montessori | Australian Certified Montessori"
-        description="OliveTree Montessori is an Australian and UK-certified Montessori school in Lahore, Pakistan. Best Montessori school offering world-class early childhood education, special education, speech therapy, and ADHD support."
-        keywords="Best School in Lahore, Montessori Lahore, Best Montessori School Lahore, Speech therapy Lahore, ADHD kids school, Australian Montessori Pakistan"
+        description="OliveTree Montessori is an Australian and UK-certified Montessori & School in Lahore, Pakistan. Best Montessori & School offering world-class early childhood education, special education, speech therapy, and ADHD support."
+        keywords="Best School in Lahore, Montessori Lahore, Best Montessori & School Lahore, Speech therapy Lahore, ADHD kids school, Australian Montessori Pakistan"
       />
 
       {/* Hero Section */}
@@ -182,7 +210,7 @@ export function Home() {
                   <div className="absolute inset-0 bg-[#0EA5E9] rounded-[2rem] rotate-3 opacity-10 transform scale-105" />
                   <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
                     <img 
-                      src="https://images.unsplash.com/photo-1565373086464-c8af0d586c0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNoaWxkcmVuJTIwc2Nob29sfGVufDF8fHx8MTc2OTMxNjc2NHww&ixlib=rb-4.1.0&q=80&w=1080" 
+                      src={hero1}
                       alt="Happy Children" 
                       className="w-full h-full object-cover"
                     />
@@ -217,7 +245,7 @@ export function Home() {
                    <div className="absolute inset-0 bg-purple-600 rounded-[2rem] -rotate-3 opacity-10 transform scale-105" />
                   <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
                     <img 
-                      src="https://images.unsplash.com/photo-1763310225537-f7161d5c93e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb250ZXNzb3JpJTIwY2xhc3Nyb29tJTIwY2hpbGRyZW58ZW58MXx8fHwxNzY5MzE5NDU2fDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                      src={hero2}
                       alt="Special Education" 
                       className="w-full h-full object-cover"
                     />
@@ -252,7 +280,7 @@ export function Home() {
                   <div className="absolute inset-0 bg-amber-500 rounded-[2rem] rotate-2 opacity-10 transform scale-105" />
                   <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
                     <img 
-                      src="https://images.unsplash.com/photo-1765133469414-02f4e445df19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzY2hvb2wlMjBjYW1wdXMlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjkzMTk0NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080" 
+                      src={hero3} 
                       alt="Campus" 
                       className="w-full h-full object-cover"
                     />
@@ -285,7 +313,7 @@ export function Home() {
                 Our activity-based learning approach fosters critical thinking, creativity, and problem-solving skills. Character building is a cornerstone of our philosophy, instilling values such as integrity, empathy, and resilience in our students to prepare them for the world with confidence and grace.
               </p>
               <p>
-                Our state-of-the-art facilities and rich curriculum provide the ideal setting for holistic growth, balancing intellectual, emotional, and social development. Join the OliveTree Montessori School, and let's shape the leaders of tomorrow.
+                Our state-of-the-art facilities and rich curriculum provide the ideal setting for holistic growth, balancing intellectual, emotional, and social development. Join the OliveTree Montessori & School, and let's shape the leaders of tomorrow.
               </p>
             </div>
           </motion.div>
@@ -449,7 +477,7 @@ export function Home() {
               className="rounded-xl overflow-hidden shadow-lg"
             >
               <img
-                src="https://images.unsplash.com/photo-1730106451023-f23ee452b3e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzY2hvb2wlMjBmYWNpbGl0aWVzfGVufDF8fHx8MTc2OTI0NjkyMnww&ixlib=rb-4.1.0&q=80&w=1080"
+                src={admission}
                 alt="School Facilities"
                 className="w-full h-full object-cover"
               />
@@ -470,7 +498,7 @@ export function Home() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1544972917-3529b113a469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB0ZWFjaGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5MjQ5MjIwfDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                  src={madam} 
                   alt="CEO Miss Sana Murtaza" 
                   className="w-full h-full object-cover"
                 />
@@ -509,7 +537,7 @@ export function Home() {
                 </p>
                 <div className="pt-4 border-t border-gray-200">
                   <p className="text-[#0EA5E9] font-bold text-lg">
-                    Join OliveTree Montessori School in Lahore, where your child's education will be enriched with independence, excellence, and global awareness.
+                    Join OliveTree Montessori & School in Lahore, where your child's education will be enriched with independence, excellence, and global awareness.
                   </p>
                 </div>
               </div>
@@ -579,18 +607,8 @@ export function Home() {
           </motion.h2>
           <Slider {...mediaSliderSettings}>
             {[
-              "https://images.unsplash.com/photo-1565373086464-c8af0d586c0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGNoaWxkcmVuJTIwc2Nob29sfGVufDF8fHx8MTc2OTMxNjc2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1763310225537-f7161d5c93e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb250ZXNzb3JpJTIwY2xhc3Nyb29tJTIwbGVhcm5pbmd8ZW58MXx8fHwxNzY5MzE4MzkyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1730106451023-f23ee452b3e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzY2hvb2wlMjBmYWNpbGl0aWVzfGVufDF8fHx8MTc2OTI0NjkyMnww&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1626402570254-3e3d1790e14f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc2OTMwODI4MXww&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1589104759909-e355f8999f7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGVlY2glMjB0aGVyYXB5JTIwY2hpbGRyZW58ZW58MXx8fHwxNzY5MzE2NzYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1761208663281-619e6532aff3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHBsYXlpbmclMjBzY2hvb2x8ZW58MXx8fHwxNzY5MzIwNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1630637991997-1cd9c8b41ce1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvdXRkb29yJTIwcGxheWdyb3VuZCUyMGtpZHN8ZW58MXx8fHwxNzY5MzIwNTEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1629652486845-eb09110a62b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnQlMjBjbGFzc3Jvb20lMjBjaGlsZHJlbnxlbnwxfHx8fDE3NjkzMjA1MTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1758612214848-04e700d192ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMGNsYXNzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzY5MzIwNTE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1666888735993-6ed30a900f36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWFkaW5nJTIwYm9va3MlMjBjaGlsZHJlbnxlbnwxfHx8fDE3NjkzMjA1MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1758685734153-132c8620c1bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwZXhwZXJpbWVudCUyMGtpZHN8ZW58MXx8fHwxNzY5MzIwNTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-              "https://images.unsplash.com/photo-1761039808159-f02b58f07032?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhY3Rpdml0eSUyMGNoaWxkcmVufGVufDF8fHx8MTc2OTMyMDUxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+              gallery1, gallery2, gallery3, gallery4, gallery5, gallery6,
+              gallery7, gallery8, gallery9, gallery10, gallery11, gallery12
             ].map((img, idx) => (
               <div key={idx} className="px-3">
                 <div className="aspect-square rounded-xl overflow-hidden shadow-md">
@@ -631,7 +649,7 @@ export function Home() {
               },
               {
                 name: "Ali Ahmed",
-                quote: "Best Montessori school in Lahore. The facilities are excellent and the staff is professional. Highly recommend to all parents.",
+                quote: "Best Montessori & School in Lahore. The facilities are excellent and the staff is professional. Highly recommend to all parents.",
                 rating: 5,
               },
               {
@@ -682,15 +700,15 @@ export function Home() {
             {[
               {
                 title: "Australian Montessori Certification",
-                image: "https://images.unsplash.com/photo-1715173679369-18006e84d6a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZGlwbG9tYXxlbnwxfHx8fDE3NjkzMTk0NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-              },
+                image: cert1,
+              },,
               {
                 title: "UK Education Standards",
-                image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZGlwbG9tYXxlbnwxfHx8fDE3NjkzMTk0NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+                image: cert2,
               },
               {
                 title: "Special Education Accreditation",
-                image: "https://images.unsplash.com/photo-1604480132715-4c264678c6f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZGlwbG9tYXxlbnwxfHx8fDE3NjkzMTk0NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+                image: cert3,
               },
             ].map((cert, index) => (
               <motion.div

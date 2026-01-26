@@ -22,7 +22,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Australian and UK-certified Montessori school in Lahore, Pakistan. Nurturing future leaders through excellence in education.
+              Australian and UK-certified Montessori & School in Lahore, Pakistan. Nurturing future leaders through excellence in education.
             </p>
             <div className="flex gap-3">
               <a
@@ -106,7 +106,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Olive Tree Montessori School. All rights reserved.
+            © {new Date().getFullYear()} Olive Tree Montessori & School. All rights reserved.
           </p>
           <a
             href="https://usdigitalpro.com/"

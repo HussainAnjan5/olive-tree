@@ -1,16 +1,24 @@
 import { GraduationCap, Users, Award, BookOpen } from "lucide-react";
 import { motion } from "motion/react";
+import sadiakhan from "@/assets/sadiakhan.jpeg";
+import aromamaham from "@/assets/aromamaham.jpeg";
+import missaroosa from "@/assets/missaroosa.jpeg";
+import aroosa from "@/assets/aroosa.jpeg";
+import aminaali from "@/assets/aminaali.jpeg";
+import tahminamumtaz from "@/assets/tahminamumtaz.jpeg";
+import sanaakhtar from "@/assets/sanaakhtar.jpeg";
+import fatimaarfan from "@/assets/fatimaarfan.jpeg";
 
 export function OurFaculty() {
   const faculty = [
-    { name: "Miss Sadia Khan", position: "Coordinator", color: "#0EA5E9" },
-    { name: "Aroma Maham", position: "Mphil English UCP", color: "#D4AF37" },
-    { name: "Miss Aroosa", position: "Chartered Accountant", color: "#0EA5E9" },
-    { name: "Aroosa", position: "Chartered Accountant", color: "#D4AF37" },
-    { name: "Amina Ali", position: "BS Finance", color: "#0EA5E9" },
-    { name: "Tehmina Mumtaz", position: "Clinical Psychologist", color: "#D4AF37" },
-    { name: "Sana Akhtar", position: "Msc Clinical Psychologist", color: "#0EA5E9" },
-    { name: "Fatima Irfan", position: "Clinical Nutritionist", color: "#D4AF37" },
+    { name: "Miss Sadia Khan", position: "Coordinator", color: "#0EA5E9", image: sadiakhan },
+    { name: "Aroma Maham", position: "Mphil English UCP", color: "#D4AF37", image: aromamaham },
+    { name: "Miss Aroosa", position: "Chartered Accountant", color: "#0EA5E9", image: missaroosa },
+    { name: "Aroosa", position: "Chartered Accountant", color: "#D4AF37", image: aroosa },
+    { name: "Amina Ali", position: "BS Finance", color: "#0EA5E9", image: aminaali },
+    { name: "Tehmina Mumtaz", position: "Clinical Psychologist", color: "#D4AF37", image: tahminamumtaz },
+    { name: "Sana Akhtar", position: "Msc Clinical Psychologist", color: "#0EA5E9", image: sanaakhtar },
+    { name: "Fatima Irfan", position: "Clinical Nutritionist", color: "#D4AF37", image: fatimaarfan },
   ];
 
   return (
@@ -110,10 +118,14 @@ Olive Tree School teachers from all backgrounds and fields have the power to inf
                 className="bg-white rounded-3xl p-8 shadow-xl border-2 border-transparent hover:border-[#0EA5E9]/50 hover:shadow-2xl transition-all group"
               >
                 <div
-                  className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+                  className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden"
                   style={{ background: `linear-gradient(135deg, ${member.color}, ${member.color}dd)` }}
                 >
-                  <GraduationCap className="w-10 h-10 text-white" />
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-[#0F172A] text-center mb-2">
                   {member.name}

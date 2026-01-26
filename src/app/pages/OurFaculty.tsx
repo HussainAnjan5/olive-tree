@@ -62,11 +62,17 @@ export function OurFaculty() {
               </div>
               <h2 className="text-4xl font-bold text-[#0F172A]">Meet Our Expert Team</h2>
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg mb-4">
-              Our faculty plays a vital role in project-based learning, integrating art, technology, and creating a supportive environment for all students. We believe in fostering a culture of excellence and innovation in education.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              Each member of our team brings unique expertise and dedication to nurturing young minds, ensuring every child receives personalized attention and the highest quality education.
+            <p className="text-gray-700 leading-relaxed text-md mb-4">
+One main contributing factor to Olive tree School’s success is its committed faculty. Our role model teachers emphasize project-based learning, art and technology, and a supportive environment in which everyone is accountable for helping kids to achieve their goal of attending school.
+
+Olive Tree School is a firm believer in the value of supporting our teachers’ continued professional development. Our teachers can apply cutting-edge teaching techniques to achieve challenging, authentic student outcomes while working in a creative team atmosphere. The best professional development takes place on the job. Additionally, giving our teachers, teacher-leaders, and administrators the finest learning environments for our students entails doing the same for them.
+
+At the start of the academic year, new teachers are introduced to our instructional paradigm and get the support of a community of practice, which includes peers and coaches. Experienced teachers can choose to work as lead teachers or pursue a job on the administration track. Our skilled teachers also assist in program creation, give professional development, execute intervention tactics, and offer advice on curriculum and design. We ensure Olive Tree School teachers are well-equipped and supported in fulfilling this crucial duty because we know how much of a difference they make to our students and to our aim of sending those children to college.
+
+Olive Tree School teachers give kids a reason to live, prepare them to excel as global citizens, and stoke their desire to succeed in school and life. Our teachers are the key factor in a child’s readiness for the future because today’s toddlers will be the leaders of tomorrow.
+What is taught to children at an early age stays with them for the rest of their life. They’ll apply what they’ve discovered to change society. Everyone knows that today’s toddlers will become tomorrow’s leaders, and our teachers can educate the youth during their formative years – whether through instructing in traditional classes, extracurricular activities, athletics, or preschool. The lives of our students can be improved by Olive Tree School’s excellent teachers. Olive Tree School teachers can fill the gap in a student’s life where there is a lack of support. We can serve as an example for others and serve as an inspiration for bigger and better things. Our Good teachers don’t let their gifted pupils get away with not reaching their full potential because they hold them accountable for their accomplishments and mistakes.
+
+Olive Tree School teachers from all backgrounds and fields have the power to influence students’ attitudes and aid in the formation of concepts about society, life, and personal objectives. Teachers can challenge pupils’ inventiveness and push their boundaries.
             </p>
           </motion.div>
         </div>

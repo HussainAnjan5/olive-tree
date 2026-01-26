@@ -1,22 +1,70 @@
 import { Link } from "react-router";
-import { ChevronRight, Award, Heart, Brain, Target, Users, Sparkles, CheckCircle2, Play } from "lucide-react";
+import { ChevronRight, Award, Heart, Brain, Target, Users, Sparkles, CheckCircle2, Play, Music } from "lucide-react";
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 
 export function SpecialEducation() {
   const services = [
-    { name: "ADHD Support", icon: Brain },
-    { name: "Down Syndrome Programs", icon: Heart },
-    { name: "Speech Therapy", icon: Sparkles },
-    { name: "Behavior Therapy", icon: Target },
-    { name: "Play School", icon: Users },
-    { name: "Learning Therapy", icon: Brain },
-    { name: "Occupational Therapy", icon: Heart },
-    { name: "Brain Gym", icon: Brain },
-    { name: "Cognitive Therapy", icon: Brain },
-    { name: "Music Therapy", icon: Sparkles },
-    { name: "ASD Interventions", icon: Target },
-    { name: "Learning Therapies", icon: CheckCircle2 },
+    { 
+      name: "ADHD Support", 
+      icon: Brain, 
+      desc: "Specialized programs and strategies to support students with attention deficit hyperactivity disorder (ADHD), promoting focus, organization, and self-regulation skills." 
+    },
+    { 
+      name: "Down Syndrome Programs", 
+      icon: Heart, 
+      desc: "Individualized educational plans and therapeutic interventions to support students with Down syndrome, fostering cognitive, social, and motor skill development." 
+    },
+    { 
+      name: "Speech Therapy", 
+      icon: Sparkles, 
+      desc: "Certified speech-language pathologists provide targeted interventions to improve communication skills, language development, and articulation." 
+    },
+    { 
+      name: "Behavior Therapy", 
+      icon: Target, 
+      desc: "Evidence-based strategies and interventions to address challenging behaviors, promote positive social interactions, and enhance self-control and emotional regulation." 
+    },
+    { 
+      name: "Play School", 
+      icon: Users, 
+      desc: "Engaging and developmentally appropriate early childhood programs designed to foster social, cognitive, and physical development through play-based learning activities." 
+    },
+    { 
+      name: "Learning Therapy", 
+      icon: Brain, 
+      desc: "Personalized interventions and educational support to address learning difficulties, including dyslexia, dyscalculia, and other learning differences." 
+    },
+    { 
+      name: "Occupational Therapy", 
+      icon: Heart, 
+      desc: "Customized interventions and activities to improve fine motor skills, sensory processing, self-care abilities, and participation in daily activities." 
+    },
+    { 
+      name: "Brain Gym", 
+      icon: Brain, 
+      desc: "Movement-based programs enhance brain function and learning capabilities." 
+    },
+    { 
+      name: "Cognitive Therapy", 
+      icon: Brain, 
+      desc: "Strengthening cognitive functions such as memory, attention, and problem-solving through tailored cognitive exercises." 
+    },
+    { 
+      name: "Music Therapy", 
+      icon: Music, 
+      desc: "Leveraging the therapeutic power of music to address emotional, cognitive, and social needs." 
+    },
+    { 
+      name: "ASD Interventions", 
+      icon: Target, 
+      desc: "Implementing individualized plans for children with Autism Spectrum Disorder to improve social, communication, and adaptive skills." 
+    },
+    { 
+      name: "Learning Therapies", 
+      icon: CheckCircle2, 
+      desc: "Special learning interventions to support academic achievement and skill development." 
+    },
   ];
 
   const staff = [
@@ -27,8 +75,7 @@ export function SpecialEducation() {
     "Miss Yusra Sajjad",
   ];
 
-  // YouTube Video IDs - these are example IDs for demonstration
-  // Replace with actual OliveTree Montessori video IDs
+  // YouTube Video IDs
   const youtubeVideos = [
     { id: "dQw4w9WgXcQ", title: "Speech Therapy Session" },
     { id: "9bZkp7q19f0", title: "ADHD Support Program" },
@@ -40,7 +87,6 @@ export function SpecialEducation() {
 
   const [currentVideo, setCurrentVideo] = useState(youtubeVideos[0]);
 
-  // Randomly select a video on component mount
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * youtubeVideos.length);
     setCurrentVideo(youtubeVideos[randomIndex]);
@@ -82,34 +128,135 @@ export function SpecialEducation() {
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-16 md:py-20">
+      {/* Chairman's Message Section */}
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-xl p-8 md:p-12 shadow-lg border border-gray-100"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-lg bg-[#0EA5E9] flex items-center justify-center">
-                <Heart className="w-7 h-7 text-white" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-2 lg:order-1"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-[#0F172A] flex items-center justify-center shadow-lg">
+                  <Award className="w-7 h-7 text-[#D4AF37]" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">Chairman's Message</h2>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
-                Lahore's First Kids Special Education Montessori
-              </h2>
-            </div>
-            <p className="text-gray-700 leading-relaxed text-lg mb-4">
-              Welcome to OliveTree Montessori and School's Sydney Campus, located at 45-B-1 Baig Road, Johar Town, Lahore. Our specialized facility is dedicated to providing exceptional care and education for children with special needs. We offer comprehensive therapy programs and early years education in a nurturing, inclusive environment.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              As Lahore's first kids special education Montessori, we combine Australian-certified Montessori methods with specialized therapy services to ensure every child reaches their full potential.
-            </p>
-          </motion.div>
+              
+              <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <p>
+                  Welcome to Olive Tree Sydney Campus, a Beacon of hope, Ray of Success for all our Beloved Kids and excellence for children with special needs, slow learners, and focused kids. Our commitment lies in creating an inclusive, supportive, and stimulating environment where every child can thrive and achieve their fullest potential.
+                </p>
+                <p>
+                  At Olive Tree, we recognize the uniqueness of each child and the importance of tailored interventions. Our school provides a comprehensive suite of therapies, including Speech Therapy, Behavioral Therapy, Occupational Therapy, Cognitive Therapy, Music Therapy, Learning Therapy ADHD Support, ASD Interventions, Brain Gym and much more. These specialized programs are meticulously designed to address the diverse needs of our students, promoting their academic, social, and emotional growth.
+                </p>
+                <p>
+                  Our therapeutic approach is grounded in evidence-based practices and clinical expertise. Our team of highly qualified professionals employs cutting-edge techniques and personalized strategies to facilitate significant progress in our students. The success stories of our school are a testament to our dedication, with a remarkable <span className="font-bold text-[#0EA5E9]">99% recovery rate, Masha Allah.</span>
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Chairman Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-1 lg:order-2"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] max-w-md mx-auto">
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw3fHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBwb3J0cmFpdHxlbnwxfHx8fDE3Njk0MDkwNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="Chairman Special Education"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8">
+                  <h3 className="text-white text-xl font-bold">Chairman</h3>
+                  <p className="text-gray-300">Special Education Program</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Lahore's First Kids Special Education Montessori (Detailed Services List) */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0F172A] mb-4">Lahore's First Kids Special Education Montessori</h2>
+            <p className="text-xl text-[#0EA5E9] font-medium max-w-4xl mx-auto">
+              OliveTree Sydney Campus, All Therapy Facilities of Early Years Education for Your Child’s Success we offer a comprehensive range of services tailored to meet the diverse needs of our students.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+             <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="space-y-6">
+                {services.slice(0, 6).map((service, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <CheckCircle2 className="w-6 h-6 text-[#0EA5E9]" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-[#0F172A] text-lg">{service.name}</h3>
+                      <p className="text-gray-600">{service.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="space-y-6 mb-8">
+                {services.slice(6).map((service, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <CheckCircle2 className="w-6 h-6 text-[#0EA5E9]" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-[#0F172A] text-lg">{service.name}</h3>
+                      <p className="text-gray-600">{service.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="relative rounded-2xl overflow-hidden shadow-xl mt-8 h-64 md:h-80 lg:h-auto">
+                <img 
+                  src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1080" 
+                  alt="Special Education Classroom" 
+                  className="w-full h-full object-cover"
+                />
+                 <div className="absolute inset-0 bg-[#0EA5E9]/10"></div>
+              </div>
+            </motion.div>
+          </div>
+          
+           <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-12 p-8 bg-[#F0F9FF] rounded-2xl border border-blue-100 text-center"
+            >
+              <p className="text-lg text-[#0F172A] font-medium leading-relaxed">
+                At Olive Tree School, we are committed to providing holistic support and fostering the growth and development of every child, ensuring they reach their full potential in a nurturing and inclusive environment.
+              </p>
+            </motion.div>
+        </div>
+      </section>
+
+      {/* Our Specialized Services (Grid View) */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2

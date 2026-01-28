@@ -1,9 +1,11 @@
 import { Link } from "react-router";
-import { ChevronRight, Award, Heart, Brain, Target, Users, Sparkles, CheckCircle2, Play, Music } from "lucide-react";
+import { ChevronRight, Award, Heart, Brain, Target, Users, Sparkles, CheckCircle2, Music } from "lucide-react";
 import { motion } from "motion/react";
-import { useState, useEffect } from "react";
+import Slider from "react-slick";
 import cc from "@/assets/ceochairman.jpg";
 import hero from "@/assets/hero.jpeg";
+import specialHero1 from "@/assets/special-hero-1.jpeg";
+import specialHero2 from "@/assets/special-hero-2.png";
 import video1 from "@/assets/WhatsApp Video 2026-01-26 at 12.21.45 PM.mp4";
 import video2 from "@/assets/WhatsApp Video 2026-01-26 at 12.22.00 PM.mp4";
 import video3 from "@/assets/WhatsApp Video 2026-01-26 at 12.22.01 PM.mp4";
@@ -11,8 +13,29 @@ import video4 from "@/assets/vedio-1.mp4";
 import classroomActivity from "@/assets/classroom-activity.jpeg";
 import artClassroom from "@/assets/art-clasroom.jpeg";
 import lab from "@/assets/lab.jpeg";
+import child from "@/assets/child.jpg";
+import specialEdu1 from "@/assets/specialedu/2.png";
+import specialEdu2 from "@/assets/specialedu/3.png";
+import specialEdu3 from "@/assets/specialedu/4.png";
+import specialEdu4 from "@/assets/specialedu/5.jpg";
+import specialEdu5 from "@/assets/specialedu/6.jpeg";
+import specialEdu6 from "@/assets/specialedu/7.jpg";
+import specialEdu7 from "@/assets/specialedu/8.jpeg";
+import specialEdu8 from "@/assets/specialedu/a.png";
 
 export function SpecialEducation() {
+  const heroSliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    arrows: false,
+  };
+
   const services = [
     { 
       name: "ADHD Support", 
@@ -84,29 +107,28 @@ export function SpecialEducation() {
     "Miss Yusra Sajjad",
   ];
 
-  // Local Videos
-  const videos = [
-    { id: 1, title: "Speech Therapy Session", src: video1 },
-    { id: 2, title: "ADHD Support Program", src: video2 },
-    { id: 3, title: "Down Syndrome Learning", src: video3 },
-    { id: 4, title: "Montessori Activities", src: video4 },
-  ];
-
-  const [currentVideo, setCurrentVideo] = useState(videos[0]);
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-[500px] md:h-[600px] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${hero})`,
-          }}
-        />
-        <div className="absolute inset-0 bg-[#0F172A]/75" />
+        <div className="absolute inset-0">
+          <Slider {...heroSliderSettings} className="h-full">
+            <div className="h-[500px] md:h-[600px] outline-none">
+              <img src={specialHero1} alt="Special Education Hero 1" className="w-full h-full object-cover" />
+            </div>
+            <div className="h-[500px] md:h-[600px] outline-none">
+              <img src={specialHero2} alt="Special Education Hero 2" className="w-full h-full object-cover" />
+            </div>
+          </Slider>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a4e]/95 via-[#0f172a50]/85 to-[#0ea4e969]/80 pointer-events-none" />
         <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">
-          <div className="text-white max-w-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-white max-w-2xl"
+          >
             <div className="inline-block bg-[#D4AF37] px-4 py-2 rounded-full mb-6">
               <span className="text-white text-sm font-medium">Sydney Campus</span>
             </div>
@@ -125,7 +147,7 @@ export function SpecialEducation() {
             >
               Join Our Program <ChevronRight className="w-5 h-5" />
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -177,6 +199,62 @@ export function SpecialEducation() {
                   <h3 className="text-white text-xl font-bold">Chairman</h3>
                   <p className="text-gray-300">Special Education Program</p>
                 </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Special Education Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-1"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] max-w-md mx-auto">
+                <img 
+                  src={child}
+                  alt="Special Education"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-2"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-[#0EA5E9] flex items-center justify-center shadow-lg">
+                  <Heart className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                   <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">Special Education</h2>
+                   <p className="text-[#0EA5E9] font-medium mt-1">OTM Speech Therapy program</p>
+                </div>
+              </div>
+              
+              <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                 <p className="font-semibold text-[#0F172A] text-xl">
+                   OTM Speech Therapy program focuses on improving your child’s speech and language skills
+                 </p>
+                <p className="font-medium text-[#0EA5E9]">
+                  First Special Kids School in Lahore where your child achieves therapy facilities with early years education.
+                </p>
+                <p>
+                  At OTM Special Kids, our dedicated child and family teams, including key workers, therapists, and practitioners, collaborate to address a child’s holistic development, focusing on physical, emotional, social, and cognitive needs.
+                </p>
+                <p>
+                  Tailored to each family’s requirements, our comprehensive support includes speech pathologists, occupational therapists, and physiotherapists, ensuring the best outcomes for children with delayed speech issues. Key workers facilitate skill-building in language and communication, cognitive development through play, personal care, sleep hygiene, assistive technology utilization, transitions, motor skills, behavior management, social interactions, and neuropsychological assessment. With the guidance of internationally accredited professionals, including Australian and UK-trained Mam Sana, our team is committed to your child’s growth and well-being.
+                </p>
               </div>
             </motion.div>
           </div>
@@ -322,6 +400,86 @@ export function SpecialEducation() {
         </div>
       </section>
 
+      {/* Image Gallery Grid */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            >
+              <img src={specialEdu1} alt="Special Education 1" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            >
+              <img src={specialEdu2} alt="Special Education 2" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            >
+              <img src={specialEdu3} alt="Special Education 3" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            >
+              <img src={specialEdu4} alt="Special Education 4" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            >
+              <img src={specialEdu5} alt="Special Education 5" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            >
+              <img src={specialEdu6} alt="Special Education 6" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7 }}
+              className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            >
+              <img src={specialEdu7} alt="Special Education 7" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8 }}
+              className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+            >
+              <img src={specialEdu8} alt="Special Education 8" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Specialized Services (Grid View) */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
@@ -362,7 +520,7 @@ export function SpecialEducation() {
         </div>
       </section>
 
-      {/* YouTube Videos Section */}
+      {/* Our Programs in Action - Video Gallery */}
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2
@@ -382,57 +540,31 @@ export function SpecialEducation() {
             Watch our students' success stories and therapy sessions
           </motion.p>
 
-          <div className="space-y-8">
-            {/* Main Featured Video */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100">
-                <div className="aspect-video relative">
-                  <video
-                    key={currentVideo.src} // Add key to force reload when source changes
-                    width="100%"
-                    height="100%"
-                    controls
-                    autoPlay
-                    className="w-full h-full object-cover"
-                  >
-                    <source src={currentVideo.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#0F172A]">{currentVideo.title}</h3>
-                  <p className="text-gray-600 mt-2">Experience our comprehensive special education programs</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Video Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {videos.map((video, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-gray-100 cursor-pointer ${currentVideo.id === video.id ? 'ring-2 ring-[#0EA5E9]' : ''}`}
-                  onClick={() => setCurrentVideo(video)}
-                >
-                  <div className="aspect-video relative group bg-gray-900 flex items-center justify-center">
-                     <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 opacity-80" />
-                     <Play className="w-8 h-8 text-white/80 relative z-10 group-hover:scale-110 transition-transform" />
-                     <div className="absolute bottom-2 right-2 px-2 py-1 bg-black/60 text-white text-[10px] rounded">Video</div>
-                  </div>
-                  <div className="p-3">
-                    <h3 className="font-semibold text-[#0F172A] text-sm line-clamp-1">{video.title}</h3>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[video1, video2, video3, video4].map((video, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <video
+                  src={video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  webkit-playsinline="true"
+                  controlsList="nodownload nofullscreen noremoteplayback"
+                  disablePictureInPicture
+                  className="w-full h-full object-cover aspect-video"
+                  controls
+                  style={{ maxHeight: '700px' }}
+                />
+              </motion.div>
+            ))}
           </div>
 
           <div className="text-center mt-12">

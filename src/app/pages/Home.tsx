@@ -1,9 +1,10 @@
 import { Link } from "react-router";
 import Slider from "react-slick";
-import { ChevronRight, BookOpen, Brain, Users, Trophy, Microscope, Library, Monitor, Star, GraduationCap, Award, Phone, Mail, MapPin, CheckCircle, Heart } from "lucide-react";
+import { ChevronRight, ChevronLeft, BookOpen, Brain, Users, Trophy, Microscope, Library, Monitor, Star, GraduationCap, Award, Phone, Mail, MapPin, CheckCircle, Heart } from "lucide-react";
 import { SEO } from "@/app/components/SEO";
+import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar";
 import { motion } from "motion/react";
-import hero1 from "@/assets/hero-1.jpeg";
+import hero1 from "@/assets/important.png";
 import hero2 from "@/assets/hero-2.jpeg";
 import hero3 from "@/assets/hero-3.jpeg";
 import madam from "@/assets/madam.jpeg";
@@ -13,6 +14,7 @@ import aromamaham from "@/assets/aromamaham.jpeg";
 import cert1 from "@/assets/certifcate-1.jpeg";
 import cert2 from "@/assets/certifcate-2.jpeg";
 import cert3 from "@/assets/certifcate-3.jpeg";
+import importantCert from "@/assets/important-certificate.jpeg";
 import facilities from "@/assets/school-facilities.jpeg"; // Assuming we use 'classroom-activity.jpeg' or similar if not found, I'll check list again. Wait, user provided 'Our Certifications & Accreditations from my assets folder'. I will use certifcate-1/2/3/4.
 // Re-checking file list from Step 215. Files available: certifcate-1.jpeg, certifcate-2.jpeg, certifcate-3.jpeg, certifcate-4.jpeg.
 // For facilities, I will use "classroom-activity.jpeg" or "lab.jpeg" or similar if specific facilities image not found. Let's use 'lab.jpeg' as placeholder for facilities if no better match, or search for it.
@@ -86,6 +88,30 @@ export function Home() {
     { name: "Practical Life Skills", icon: Trophy },
   ];
 
+  const NextArrow = ({ onClick }: { onClick?: () => void }) => {
+    return (
+      <button
+        onClick={onClick}
+        className="absolute -right-4 lg:-right-12 top-1/2 -translate-y-1/2 z-10 p-2 text-white/70 hover:text-white transition-colors hidden md:block"
+        aria-label="Next"
+      >
+        <ChevronRight className="w-8 h-8" />
+      </button>
+    );
+  };
+
+  const PrevArrow = ({ onClick }: { onClick?: () => void }) => {
+    return (
+      <button
+        onClick={onClick}
+        className="absolute -left-4 lg:-left-12 top-1/2 -translate-y-1/2 z-10 p-2 text-white/70 hover:text-white transition-colors hidden md:block"
+        aria-label="Previous"
+      >
+        <ChevronLeft className="w-8 h-8" />
+      </button>
+    );
+  };
+
   const feedbackSliderSettings = {
     dots: true,
     infinite: true,
@@ -94,6 +120,9 @@ export function Home() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -292,6 +321,66 @@ export function Home() {
         </div>
       </section>
 
+      {/* CEO's Message */}
+      <section className="py-16 md:py-24 bg-[#F0F9FF]">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-2 lg:order-1"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                <img 
+                  src={madam} 
+                  alt="CEO Miss Sana Murtaza" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+                  <h3 className="text-white text-xl font-bold">Miss Sana Murtaza</h3>
+                  <p className="text-gray-200">CEO & Founder</p>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-1 lg:order-2"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-[#D4AF37] flex items-center justify-center rotate-3 transform shadow-lg">
+                  <Award className="w-7 h-7 text-white -rotate-3" />
+                </div>
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">CEO's Message</h2>
+                  <p className="text-gray-500 font-medium tracking-wide text-sm uppercase mt-1">Leading with Vision</p>
+                </div>
+              </div>
+              
+              <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <p className="italic text-gray-800 font-medium">
+                  "Welcome to OliveTree Montessori Lahore, where we proudly offer a distinguished early years education certified by Australian and UK standards."
+                </p>
+                <p>
+                   At OliveTree Montessori, we inspire and empower students to be lifelong learners, critical thinkers, and valuable global citizens. Our Montessori curriculum fosters strong, independent students who uphold Pakistani values and excel academically.
+                </p>
+                <p>
+                  We create a nurturing environment promoting academic excellence and character development, ensuring every child acquires the skills for lifelong success. Our students explore their interests and objectives, gaining a comprehensive understanding of the world.
+                </p>
+                <div className="pt-4 border-t border-gray-200">
+                  <p className="text-[#0EA5E9] font-bold text-lg">
+                    Join OliveTree Montessori & School in Lahore, where your child's education will be enriched with independence, excellence, and global awareness.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Welcome Section */}
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
@@ -427,125 +516,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Admission Procedure */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center text-[#0F172A] mb-12"
-          >
-            Admission Procedure
-          </motion.h2>
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 md:p-10 shadow-lg border border-gray-100"
-            >
-              <p className="text-gray-700 mb-8 text-lg">
-                All applications for the new academic year will be processed starting February 1st. Our admission process includes:
-              </p>
-              <ul className="space-y-5">
-                {[
-                  "Meeting with the director and completing registration",
-                  "Student interview and assessment",
-                  "Parent-student meeting with our academic team",
-                  "Submission of required documentation and records",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-[#0EA5E9] flex items-center justify-center flex-shrink-0 mt-1">
-                      <CheckCircle className="w-5 h-5 text-white" />
-                    </div>
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                to="/apply-online"
-                className="mt-8 inline-flex items-center gap-2 bg-[#0EA5E9] hover:bg-[#0284c7] text-white px-8 py-3 rounded-lg font-medium transition-colors"
-              >
-                Apply Online <ChevronRight className="w-5 h-5" />
-              </Link>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="rounded-xl overflow-hidden shadow-lg"
-            >
-              <img
-                src={admission}
-                alt="School Facilities"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* CEO's Message */}
-      <section className="py-16 md:py-24 bg-[#F0F9FF]">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="order-2 lg:order-1"
-            >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                <img 
-                  src={madam} 
-                  alt="CEO Miss Sana Murtaza" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
-                  <h3 className="text-white text-xl font-bold">Miss Sana Murtaza</h3>
-                  <p className="text-gray-200">CEO & Founder</p>
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="order-1 lg:order-2"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-[#D4AF37] flex items-center justify-center rotate-3 transform shadow-lg">
-                  <Award className="w-7 h-7 text-white -rotate-3" />
-                </div>
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">CEO's Message</h2>
-                  <p className="text-gray-500 font-medium tracking-wide text-sm uppercase mt-1">Leading with Vision</p>
-                </div>
-              </div>
-              
-              <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
-                <p className="italic text-gray-800 font-medium">
-                  "Welcome to OliveTree Montessori Lahore, where we proudly offer a distinguished early years education certified by Australian and UK standards."
-                </p>
-                <p>
-                   At OliveTree Montessori, we inspire and empower students to be lifelong learners, critical thinkers, and valuable global citizens. Our Montessori curriculum fosters strong, independent students who uphold Pakistani values and excel academically.
-                </p>
-                <p>
-                  We create a nurturing environment promoting academic excellence and character development, ensuring every child acquires the skills for lifelong success. Our students explore their interests and objectives, gaining a comprehensive understanding of the world.
-                </p>
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="text-[#0EA5E9] font-bold text-lg">
-                    Join OliveTree Montessori & School in Lahore, where your child's education will be enriched with independence, excellence, and global awareness.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Facilities Section */}
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
@@ -629,7 +599,7 @@ export function Home() {
       </section>
 
       {/* Parent Feedback */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-[#003366]">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -637,10 +607,10 @@ export function Home() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-3">Parent Feedback</h2>
-            <p className="text-gray-600 text-lg">What Parents Say About OliveTree Montessori</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Parent Feedback</h2>
+            <p className="text-sky-100 text-lg">What Parents Say About OliveTree Montessori</p>
           </motion.div>
-          <Slider {...feedbackSliderSettings}>
+          <Slider {...feedbackSliderSettings} className="feedback-slider">
             {[
               {
                 name: "Ayesha Khan",
@@ -669,14 +639,22 @@ export function Home() {
               },
             ].map((feedback, idx) => (
               <div key={idx} className="px-3">
-                <div className="bg-white rounded-xl p-8 shadow-md border border-gray-100 h-full">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(feedback.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-[#D4AF37] fill-[#D4AF37]" />
-                    ))}
+                <div className="h-full p-8 text-center">
+                  <p className="text-white mb-6 leading-relaxed text-lg">"{feedback.quote}"</p>
+                  <div className="flex flex-col items-center gap-4">
+                    <Avatar className="w-20 h-20 border-4 border-white shadow-lg">
+                      <AvatarImage src={`https://ui-avatars.com/api/?name=${feedback.name}&background=random&color=fff`} />
+                      <AvatarFallback>{feedback.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                        <h4 className="font-bold text-white text-xl">{feedback.name}</h4>
+                         <div className="flex justify-center gap-1 mt-2">
+                            {[...Array(feedback.rating)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
+                            ))}
+                        </div>
+                    </div>
                   </div>
-                  <p className="text-gray-700 mb-6 leading-relaxed">\"{feedback.quote}\"</p>
-                  <p className="font-semibold text-[#0F172A]">— {feedback.name}</p>
                 </div>
               </div>
             ))}
@@ -696,6 +674,23 @@ export function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-3">Our Certifications & Accreditations</h2>
             <p className="text-gray-600 text-lg">Recognized Excellence in Montessori Education</p>
           </motion.div>
+
+          {/* Featured Certificate */}
+          <div className="flex justify-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="bg-white p-2 rounded-2xl shadow-xl border-4 border-[#0EA5E9]/10 max-w-3xl w-full"
+            >
+              <img
+                src={importantCert}
+                alt="Important Certification"
+                className="w-full h-auto rounded-xl"
+              />
+            </motion.div>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {

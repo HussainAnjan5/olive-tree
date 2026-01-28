@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Camera, Image as ImageIcon } from "lucide-react";
+import Slider from "react-slick";
 
 import artClassroom from "@/assets/art-clasroom.jpeg";
 import cafeteria from "@/assets/cafeteria.jpeg";
@@ -12,6 +13,18 @@ import sportsActivities from "@/assets/sports-activities.jpeg";
 import activity from "@/assets/classroom-activity.jpeg"
 
 export function Gallery() {
+  const heroSliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    arrows: false,
+  };
+
   const images = [
     {
       url: happyChildren,
@@ -55,14 +68,20 @@ export function Gallery() {
     <div className="min-h-screen bg-gradient-to-b from-white via-[#F0F9FF] to-white">
       {/* Hero Section */}
       <section className="relative h-[500px] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              `url(${happyChildren})`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0EA5E9]/80" />
+        <div className="absolute inset-0">
+          <Slider {...heroSliderSettings} className="h-full">
+            <div className="h-[500px] outline-none">
+              <img src={happyChildren} alt="Happy Children" className="w-full h-full object-cover" />
+            </div>
+            <div className="h-[500px] outline-none">
+              <img src={childrenPlaying} alt="Children Playing" className="w-full h-full object-cover" />
+            </div>
+            <div className="h-[500px] outline-none">
+              <img src={activity} alt="Classroom Activity" className="w-full h-full object-cover" />
+            </div>
+          </Slider>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a4e]/95 via-[#0f172a50]/85 to-[#0ea4e969]/80 pointer-events-none" />
         <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

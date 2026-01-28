@@ -37,12 +37,12 @@ export function ContactUs() {
 
   const locations = [
     {
-      name: "Johar Town Campus - Main",
+      name: "Johar Town Lahore",
       address: "House 50, D/1 Baig Rd, Block D2 Block D 2 Phase 1 Johar Town, Lahore, Punjab 54000",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.3524662787744!2d74.27134931543738!3d31.540366981346833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904ec87c3fae9%3A0x8c3f8e8c3f8e8c3f!2sJohar%20Town%2C%20Lahore!5e0!3m2!1sen!2spk!4v1234567890123",
     },
     {
-      name: "Johar Town Campus - D Block",
+      name: "49-D Baig Rd",
       address: "49-D Baig Rd, Block D2 Block D 1 Phase 1 Johar Town, Lahore, Punjab 54782",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.3524662787744!2d74.27134931543738!3d31.540366981346833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904ec87c3fae9%3A0x8c3f8e8c3f8e8c3f!2sJohar%20Town%2C%20Lahore!5e0!3m2!1sen!2spk!4v1234567890124",
     },

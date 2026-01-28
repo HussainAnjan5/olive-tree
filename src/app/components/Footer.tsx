@@ -1,5 +1,6 @@
-import { Facebook, Instagram, Youtube, ArrowUp, GraduationCap } from "lucide-react";
+import { Facebook, Instagram, Youtube, Linkedin, ArrowUp, GraduationCap } from "lucide-react";
 import { Link } from "react-router";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   const scrollToTop = () => {
@@ -13,12 +14,12 @@ export function Footer() {
           {/* About */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-lg bg-[#0EA5E9] flex items-center justify-center">
-                <GraduationCap className="w-7 h-7 text-white" />
+              <div className="w-12 h-12 rounded-md bg-white flex items-center justify-center p-1">
+                <img src={logo} alt="Olive Tree Montessori Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">Olive Tree Montessori</h3>
-                <p className="text-gray-400 text-sm">Best School in Pakistan</p>
+                <p className="text-gray-400 text-sm">Best School in Lahore</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -48,6 +49,14 @@ export function Footer() {
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#0EA5E9] transition-colors"
               >
                 <Youtube className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/olive-tree-montessori-school/?originalSubdomain=pk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#0EA5E9] transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -82,23 +91,36 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-bold mb-6 text-white">Contact Us</h3>
-            <div className="space-y-3 text-gray-300">
-              <p>Johar Town, Lahore</p>
-              <p>
-                <a href="tel:+923028815435" className="hover:text-[#0EA5E9] transition-colors">
-                  03028815435
-                </a>
-              </p>
-              <p>
-                <a href="tel:+923258815444" className="hover:text-[#0EA5E9] transition-colors">
-                  03258815444
-                </a>
-              </p>
-              <p>
-                <a href="mailto:sanaolivetree@gmail.com" className="hover:text-[#0EA5E9] transition-colors">
-                  sanaolivetree@gmail.com
-                </a>
-              </p>
+            <div className="space-y-4 text-gray-300 text-sm">
+              <div>
+                <p className="font-semibold text-white mb-1">Johar Town Lahore</p>
+                <p>House 50, D/1 Baig Rd, Block D2, Johar Town, Lahore</p>
+              </div>
+              <div>
+                <p className="font-semibold text-white mb-1">49-D Baig Rd</p>
+                <p>49-D Baig Rd, Block D2, Johar Town, Lahore</p>
+              </div>
+              <div>
+                <p className="font-semibold text-white mb-1">Johar Town Campus - G Block</p>
+                <p>Plot 513, Block G1, Johar Town, Lahore</p>
+              </div>
+              <div className="pt-2 space-y-2">
+                <p>
+                  <a href="tel:+923028815435" className="hover:text-[#0EA5E9] transition-colors">
+                    03028815435
+                  </a>
+                </p>
+                <p>
+                  <a href="tel:+923258815444" className="hover:text-[#0EA5E9] transition-colors">
+                    03258815444
+                  </a>
+                </p>
+                <p>
+                  <a href="mailto:sanaolivetree@gmail.com" className="hover:text-[#0EA5E9] transition-colors">
+                    sanaolivetree@gmail.com
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

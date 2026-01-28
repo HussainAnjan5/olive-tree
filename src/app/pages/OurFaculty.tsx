@@ -1,5 +1,6 @@
 import { GraduationCap, Users, Award, BookOpen } from "lucide-react";
 import { motion } from "motion/react";
+import Slider from "react-slick";
 import sadiakhan from "@/assets/sadiakhan.jpeg";
 import aromamaham from "@/assets/aromamaham.jpeg";
 import missaroosa from "@/assets/missaroosa.jpeg";
@@ -8,8 +9,23 @@ import aminaali from "@/assets/aminaali.jpeg";
 import tahminamumtaz from "@/assets/tahminamumtaz.jpeg";
 import sanaakhtar from "@/assets/sanaakhtar.jpeg";
 import fatimaarfan from "@/assets/fatimaarfan.jpeg";
+import hero1 from "@/assets/hero-1.jpeg";
+import hero2 from "@/assets/hero-2.jpeg";
+import hero3 from "@/assets/hero-3.jpeg";
 
 export function OurFaculty() {
+  const heroSliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    arrows: false,
+  };
+
   const faculty = [
     { name: "Miss Sadia Khan", position: "Coordinator", color: "#0EA5E9", image: sadiakhan },
     { name: "Aroma Maham", position: "Mphil English UCP", color: "#D4AF37", image: aromamaham },
@@ -25,14 +41,20 @@ export function OurFaculty() {
     <div className="min-h-screen bg-gradient-to-b from-white via-[#F0F9FF] to-white">
       {/* Hero Section */}
       <section className="relative h-[500px] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              'url("https://images.unsplash.com/photo-1744809482817-9a9d4fc280af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFjaGVyJTIwdGVhY2hpbmclMjBjaGlsZHJlbnxlbnwxfHx8fDE3NjkzMDkwMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080")',
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0EA5E9]/80" />
+        <div className="absolute inset-0">
+          <Slider {...heroSliderSettings} className="h-full">
+            <div className="h-[500px] outline-none">
+              <img src={hero1} alt="Our Faculty Hero 1" className="w-full h-full object-cover" />
+            </div>
+            <div className="h-[500px] outline-none">
+              <img src={hero2} alt="Our Faculty Hero 2" className="w-full h-full object-cover" />
+            </div>
+            <div className="h-[500px] outline-none">
+              <img src={hero3} alt="Our Faculty Hero 3" className="w-full h-full object-cover" />
+            </div>
+          </Slider>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a4e]/95 via-[#0f172a50]/85 to-[#0ea4e969]/80 pointer-events-none" />
         <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}

@@ -24,9 +24,9 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-10">
             {/* Left: Email */}
-            <a href="mailto:info@olivetreeschool.edu.pk" className="flex items-center gap-2 text-sm hover:text-[#0EA5E9] transition-colors">
+            <a href="mailto:sanaolivetree@gmail.com" className="flex items-center gap-2 text-sm hover:text-[#0EA5E9] transition-colors">
               <Mail className="w-4 h-4" />
-              <span className="hidden sm:inline">info@olivetreeschool.edu.pk</span>
+              <span className="hidden sm:inline">sanaolivetree@gmail.com</span>
             </a>
             
             {/* Right: Social Media Icons */}

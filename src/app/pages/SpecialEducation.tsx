@@ -117,7 +117,7 @@ export function SpecialEducation() {
               <img src={specialHero1} alt="Special Education Hero 1" className="w-full h-full object-cover" />
             </div>
             <div className="h-[500px] md:h-[600px] outline-none">
-              <img src={specialHero2} alt="Special Education Hero 2" className="w-full h-full object-cover" />
+              <img src={specialHero1} alt="Special Education Hero 2" className="w-full h-full object-cover" />
             </div>
           </Slider>
         </div>

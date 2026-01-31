@@ -1,3 +1,4 @@
+import specialEdu6 from "@/assets/specialedu/6.jpeg";
 import { Link } from "react-router";
 import Slider from "react-slick";
 import { ChevronRight, ChevronLeft, BookOpen, Brain, Users, Trophy, Microscope, Library, Monitor, Star, GraduationCap, Award, Phone, Mail, MapPin, CheckCircle, Heart } from "lucide-react";
@@ -7,7 +8,7 @@ import { motion } from "motion/react";
 import hero1 from "@/assets/important.png";
 import hero2 from "@/assets/hero-2.jpeg";
 import hero3 from "@/assets/hero-3.jpeg";
-import madam from "@/assets/madam.jpeg";
+import madam from "@/assets/ceo-image.png";
 import sadiakhan from "@/assets/sadiakhan.jpeg";
 import missaroosa from "@/assets/missaroosa.jpeg";
 import aromamaham from "@/assets/aromamaham.jpeg";
@@ -200,7 +201,7 @@ export function Home() {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#0F172A] leading-tight"
                   >
-                    Shaping Future Leaders with <span className="text-[#0EA5E9]">Excellence</span>
+                    Australian Certified <span className="text-[#0EA5E9]">Montessori in Lahore</span>
                   </motion.h1>
                   <motion.p 
                     initial={{ opacity: 0, y: 20 }}
@@ -564,6 +565,21 @@ export function Home() {
         </div>
       </section>
 
+      {/* Big Image Before Media Gallery */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0EA5E9]/10">
+              <img src={specialEdu6} alt="Special Education" className="w-full h-auto object-cover" style={{maxHeight:'600px'}} />
+            </div>
+          </motion.div>
+        </div>
+      </section>
       {/* Media Gallery Carousel */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">

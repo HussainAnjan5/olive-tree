@@ -34,7 +34,7 @@ export function ApplyOnline() {
 *Special Needs:* ${formData.hasIssue === 'yes' ? 'Yes' : 'No'}
 ${formData.hasIssue === 'yes' ? `*Issue Details:* ${formData.issueDetails}` : ''}`.trim();
 
-    const phoneNumber = "923091096029";
+    const phoneNumber = "923028815435";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
@@ -73,7 +73,7 @@ ${formData.hasIssue === 'yes' ? `*Issue Details:* ${formData.issueDetails}` : ''
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#c4a02d] flex items-center justify-center shadow-lg">
                 <FileCheck className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-[#0EA5E9] to-[#D4AF37] bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-[#0EA5E9] to-[#D4AF37] bg-clip-text ">
                 Apply Online
               </h1>
             </div>

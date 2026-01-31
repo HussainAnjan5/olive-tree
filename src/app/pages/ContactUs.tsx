@@ -56,23 +56,19 @@ export function ContactUs() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F0F9FF] to-white">
       {/* Hero Section */}
-      <section className="relative h-[450px] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              `url(${hero})`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0EA5E9]/80" />
-        <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">
+      <section className="relative h-[550px] overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={hero} alt="Contact Us Hero" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a4e]/95 via-[#0f172a50]/85 to-[#0ea4e969]/80 pointer-events-none z-10" />
+        <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center z-20">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-white max-w-3xl"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-[#0EA5E9] bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-[#0EA5E9] bg-clip-text ">
               Contact Us
             </h1>
             <p className="text-xl md:text-2xl mb-4">Get in Touch with Olive Tree Montessori</p>
@@ -108,8 +104,8 @@ export function ContactUs() {
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-bold text-[#0F172A] mb-2 text-lg">Phone</h3>
-              <a href="tel:+923028815435" className="text-[#0EA5E9] text-sm hover:underline block">
-                03028815435
+              <a href="https://wa.me/923028815435" target="_blank" rel="noopener noreferrer" className="text-[#0EA5E9] text-sm hover:underline block">
+                03028815435 (WhatsApp)
               </a>
               <a href="tel:+923258815444" className="text-[#0EA5E9] text-sm hover:underline block mt-1">
                 03258815444

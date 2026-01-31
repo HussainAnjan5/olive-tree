@@ -94,7 +94,7 @@ export function Gallery() {
                 <Camera className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-[#0EA5E9] to-[#D4AF37] bg-clip-text text-transparent">
+                <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-[#0EA5E9] to-[#D4AF37] bg-clip-text ">
                   Gallery
                 </h1>
                 <p className="text-[#F0F9FF] text-lg mt-1">Moments that Matter</p>

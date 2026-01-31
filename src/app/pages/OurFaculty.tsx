@@ -11,7 +11,7 @@ import sanaakhtar from "@/assets/sanaakhtar.jpeg";
 import fatimaarfan from "@/assets/fatimaarfan.jpeg";
 import hero1 from "@/assets/hero-1.jpeg";
 import hero2 from "@/assets/hero-2.jpeg";
-import hero3 from "@/assets/hero-3.jpeg";
+import hero3 from "@/assets/specialedu/3.jpeg";
 
 export function OurFaculty() {
   const heroSliderSettings = {
@@ -66,7 +66,7 @@ export function OurFaculty() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#c4a02d] flex items-center justify-center shadow-lg">
                 <GraduationCap className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-[#0EA5E9] to-[#D4AF37] bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-[#0EA5E9] to-[#D4AF37] bg-clip-text">
                 Our Faculty
               </h1>
             </div>
@@ -140,7 +140,7 @@ Olive Tree School teachers from all backgrounds and fields have the power to inf
                 className="bg-white rounded-3xl p-8 shadow-xl border-2 border-transparent hover:border-[#0EA5E9]/50 hover:shadow-2xl transition-all group"
               >
                 <div
-                  className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden"
+                  className="w-60 h-80 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden"
                   style={{ background: `linear-gradient(135deg, ${member.color}, ${member.color}dd)` }}
                 >
                   <img

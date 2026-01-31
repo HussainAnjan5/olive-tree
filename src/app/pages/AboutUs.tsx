@@ -105,7 +105,7 @@ export function AboutUs() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-[#0EA5E9] to-[#D4AF37] bg-clip-text text-transparent"
+              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-[#0EA5E9] to-[#D4AF37] bg-clip-text "
             >
               About Us
             </motion.h1>

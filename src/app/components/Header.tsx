@@ -70,7 +70,7 @@ export function Header() {
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded bg-white flex items-center justify-center overflow-hidden">
+              <div className="w-20 h-20 rounded bg-white flex items-center justify-center overflow-hidden">
                 <img src={logo} alt="Olive Tree Montessori" className="w-full h-full object-contain" />
               </div>
               <div>

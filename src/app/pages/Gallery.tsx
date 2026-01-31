@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import { Camera, Image as ImageIcon } from "lucide-react";
 import Slider from "react-slick";
 
+
+// Previous images
 import artClassroom from "@/assets/art-clasroom.jpeg";
 import cafeteria from "@/assets/cafeteria.jpeg";
 import childrenPlaying from "@/assets/childern-playing.jpeg";
@@ -10,7 +12,26 @@ import lab from "@/assets/lab.jpeg";
 import musicClass from "@/assets/music-class.jpeg";
 import readingTime from "@/assets/reading-time.jpeg";
 import sportsActivities from "@/assets/sports-activities.jpeg";
-import activity from "@/assets/classroom-activity.jpeg"
+import activity from "@/assets/classroom-activity.jpeg";
+
+// Gallery folder images
+import g1 from "@/assets/gallery/WhatsApp-Image-2024-07-07-at-2.47.33-PM-1-1536x1152.jpeg";
+import g2 from "@/assets/gallery/WhatsApp-Image-2024-07-07-at-2.47.34-PM-1-1536x1152.jpeg";
+import g3 from "@/assets/gallery/WhatsApp-Image-2024-07-07-at-2.47.34-PM-1536x1152 (1).jpeg";
+import g4 from "@/assets/gallery/WhatsApp-Image-2024-07-07-at-2.47.34-PM-1536x1152.jpeg";
+import g5 from "@/assets/gallery/WhatsApp-Image-2024-07-07-at-2.47.35-PM-1536x1152.jpeg";
+import g6 from "@/assets/gallery/WhatsApp-Image-2024-07-07-at-2.47.35-PM-2-1536x1152.jpeg";
+import g7 from "@/assets/gallery/WhatsApp-Image-2024-07-07-at-2.47.36-PM-1536x1152.jpeg";
+import g8 from "@/assets/gallery/WhatsApp-Image-2024-07-17-at-7.14.29-PM-1152x1536.jpeg";
+import g9 from "@/assets/gallery/WhatsApp-Image-2024-07-17-at-7.14.32-PM-1-1152x1536.jpeg";
+import g10 from "@/assets/gallery/WhatsApp-Image-2024-07-17-at-7.14.32-PM-1152x1536.jpeg";
+import g11 from "@/assets/gallery/WhatsApp-Image-2024-07-17-at-7.14.33-PM-1152x1536.jpeg";
+import g12 from "@/assets/gallery/WhatsApp-Image-2024-07-17-at-7.14.36-PM-768x1310.jpeg";
+import g13 from "@/assets/gallery/WhatsApp-Image-2024-07-17-at-7.14.39-PM-1.jpeg";
+import g14 from "@/assets/gallery/WhatsApp-Image-2024-07-17-at-7.14.42-PM-1.jpeg";
+import g15 from "@/assets/gallery/WhatsApp-Image-2024-07-17-at-7.14.43-PM-1-1536x1152.jpeg";
+import g16 from "@/assets/gallery/WhatsApp-Image-2024-07-17-at-7.14.43-PM-1152x1536.jpeg";
+import g17 from "@/assets/gallery/WhatsApp-Image-2024-07-17-at-7.14.45-PM-1536x1152.jpeg";
 
 export function Gallery() {
   const heroSliderSettings = {
@@ -26,42 +47,10 @@ export function Gallery() {
   };
 
   const images = [
-    {
-      url: happyChildren,
-      title: "Happy Children",
-    },
-    {
-      url: activity,
-      title: "Classroom Activity",
-    },
-    {
-      url: childrenPlaying,
-      title: "Children Playing",
-    },
-    {
-       url: sportsActivities,
-       title: "Sports Activities",
-    },
-    {
-      url: lab,
-      title: "Science Lab",
-    },
-    {
-      url: musicClass,
-      title: "Music Class",
-    },
-    {
-      url: readingTime,
-      title: "Reading Time",
-    },
-    {
-      url: artClassroom,
-      title: "Art Classroom",
-    },
-    {
-      url: cafeteria,
-      title: "School Cafeteria",
-   }
+    // Previous images
+    happyChildren, activity, childrenPlaying, sportsActivities, lab, musicClass, readingTime, artClassroom, cafeteria,
+    // Gallery folder images
+    g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17
   ];
 
   return (
@@ -123,7 +112,7 @@ export function Gallery() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {images.map((image, index) => (
+            {images.map((img, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -136,17 +125,10 @@ export function Gallery() {
               >
                 <div className={`relative ${index === 0 || index === 4 || index === 8 ? "h-[500px]" : "h-[300px]"}`}>
                   <img
-                    src={image.url}
-                    alt={image.title}
+                    src={img}
+                    alt="Gallery Image"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-[#0F172A]/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                    <div className="flex items-center gap-3 mb-2">
-                      <ImageIcon className="w-6 h-6 text-[#D4AF37]" />
-                      <h3 className="text-white text-xl font-bold">{image.title}</h3>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             ))}

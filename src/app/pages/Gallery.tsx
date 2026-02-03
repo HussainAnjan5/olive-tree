@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Camera, Image as ImageIcon } from "lucide-react";
 import Slider from "react-slick";
+import headerImage from "@/assets/header-image.jpg";
 
 
 // Previous images
@@ -58,17 +59,7 @@ export function Gallery() {
       {/* Hero Section */}
       <section className="relative h-[500px] overflow-hidden">
         <div className="absolute inset-0">
-          <Slider {...heroSliderSettings} className="h-full">
-            <div className="h-[500px] outline-none">
-              <img src={happyChildren} alt="Happy Children" className="w-full h-full object-cover" />
-            </div>
-            <div className="h-[500px] outline-none">
-              <img src={childrenPlaying} alt="Children Playing" className="w-full h-full object-cover" />
-            </div>
-            <div className="h-[500px] outline-none">
-              <img src={activity} alt="Classroom Activity" className="w-full h-full object-cover" />
-            </div>
-          </Slider>
+          <img src={headerImage} alt="Gallery" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a4e]/95 via-[#0f172a50]/85 to-[#0ea4e969]/80 pointer-events-none" />
         <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">

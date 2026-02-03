@@ -2,9 +2,7 @@ import { Target, Eye, Award, Users, TrendingUp, BookOpen, Globe, Heart, CheckCir
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
-import hero from "@/assets/hero-1.jpeg";
-import hero2 from "@/assets/hero-2.jpeg";
-import hero3 from "@/assets/hero-3.jpeg";
+import headerImage from "@/assets/header-image.jpg";
 import aboutImg1 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.51 PM (1).jpeg";
 import aboutImg2 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.52 PM (1).jpeg";
 import aboutImg3 from "@/assets/WhatsApp Image 2026-01-26 at 12.21.53 PM (2).jpeg";
@@ -72,26 +70,7 @@ export function AboutUs() {
       {/* Hero Section with Slider */}
       <section className="relative h-[550px] overflow-hidden">
         <div className="absolute inset-0">
-          <Slider {...heroSliderSettings} className="h-full">
-            <div className="h-[550px] outline-none">
-              <img src={hero} alt="Olive Tree Hero 1" className="w-full h-full object-cover" />
-            </div>
-            <div className="h-[550px] outline-none">
-              <img src={hero2} alt="Olive Tree Hero 2" className="w-full h-full object-cover" />
-            </div>
-            <div className="h-[550px] outline-none">
-              <img src={aboutImg1} alt="About Us 1" className="w-full h-full object-cover" />
-            </div>
-            <div className="h-[550px] outline-none">
-              <img src={aboutImg2} alt="About Us 2" className="w-full h-full object-cover" />
-            </div>
-            <div className="h-[550px] outline-none">
-              <img src={aboutImg3} alt="About Us 3" className="w-full h-full object-cover" />
-            </div>
-            <div className="h-[550px] outline-none">
-              <img src={aboutImg4} alt="About Us 4" className="w-full h-full object-cover" />
-            </div>
-          </Slider>
+          <img src={headerImage} alt="About Us" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a4e]/95 via-[#0f172a50]/85 to-[#0ea4e969]/80 pointer-events-none z-10" />
         <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center z-20">
@@ -276,7 +255,7 @@ export function AboutUs() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src={hero3}
+                  src={headerImage}
                   alt="Children Learning"
                   className="w-full h-full object-cover"
                 />

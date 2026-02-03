@@ -183,3 +183,58 @@
     line-height: 1.5;
   }
 }
+
+/* Certificate Slider Styles */
+.certificate-slider .slick-slider {
+  padding: 20px 0;
+}
+
+.certificate-slider .slick-dots {
+  bottom: -40px;
+}
+
+.certificate-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: #0EA5E9;
+  opacity: 0.5;
+}
+
+.certificate-slider .slick-dots li.slick-active button:before {
+  color: #0EA5E9;
+  opacity: 1;
+}
+
+.certificate-slider .slick-prev,
+.certificate-slider .slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  background-color: #0F172A;
+  border-radius: 50%;
+}
+
+.certificate-slider .slick-prev:hover,
+.certificate-slider .slick-next:hover {
+  background-color: #0EA5E9;
+}
+
+.certificate-slider .slick-prev {
+  left: -50px;
+}
+
+.certificate-slider .slick-next {
+  right: -50px;
+}
+
+.certificate-slider .slick-prev:before,
+.certificate-slider .slick-next:before {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .certificate-slider .slick-prev,
+  .certificate-slider .slick-next {
+    display: none !important;
+  }
+}

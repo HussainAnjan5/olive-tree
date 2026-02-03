@@ -9,9 +9,7 @@ import aminaali from "@/assets/aminaali.jpeg";
 import tahminamumtaz from "@/assets/tahminamumtaz.jpeg";
 import sanaakhtar from "@/assets/sanaakhtar.jpeg";
 import fatimaarfan from "@/assets/fatimaarfan.jpeg";
-import hero1 from "@/assets/hero-1.jpeg";
-import hero2 from "@/assets/hero-2.jpeg";
-import hero3 from "@/assets/specialedu/3.jpeg";
+import headerImage from "@/assets/header-image.jpg";
 
 export function OurFaculty() {
   const heroSliderSettings = {
@@ -42,17 +40,7 @@ export function OurFaculty() {
       {/* Hero Section */}
       <section className="relative h-[500px] overflow-hidden">
         <div className="absolute inset-0">
-          <Slider {...heroSliderSettings} className="h-full">
-            <div className="h-[500px] outline-none">
-              <img src={hero1} alt="Our Faculty Hero 1" className="w-full h-full object-cover" />
-            </div>
-            <div className="h-[500px] outline-none">
-              <img src={hero2} alt="Our Faculty Hero 2" className="w-full h-full object-cover" />
-            </div>
-            <div className="h-[500px] outline-none">
-              <img src={hero3} alt="Our Faculty Hero 3" className="w-full h-full object-cover" />
-            </div>
-          </Slider>
+          <img src={headerImage} alt="Our Faculty" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a4e]/95 via-[#0f172a50]/85 to-[#0ea4e969]/80 pointer-events-none" />
         <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">

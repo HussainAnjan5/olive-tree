@@ -6,10 +6,9 @@ import cc from "@/assets/ceochairman.jpg";
 import hero from "@/assets/hero.jpeg";
 import specialHero1 from "@/assets/specialedu/6.jpeg";
 import specialHero2 from "@/assets/specialedu/a.png";
-import video1 from "@/assets/WhatsApp Video 2026-01-26 at 12.21.45 PM.mp4";
-import video2 from "@/assets/WhatsApp Video 2026-01-26 at 12.22.00 PM.mp4";
-import video3 from "@/assets/WhatsApp Video 2026-01-26 at 12.22.01 PM.mp4";
-import video4 from "@/assets/vedio-1.mp4";
+import video1 from "@/assets/specialedu/1.mp4";
+import video2 from "@/assets/specialedu/2.mp4";
+import video3 from "@/assets/specialedu/3.mp4";
 import classroomActivity from "@/assets/classroom-activity.jpeg";
 import artClassroom from "@/assets/art-clasroom.jpeg";
 import lab from "@/assets/lab.jpeg";
@@ -22,6 +21,11 @@ import specialEdu5 from "@/assets/specialedu/6.jpeg";
 import specialEdu6 from "@/assets/specialedu/7.jpg";
 import specialEdu7 from "@/assets/specialedu/8.jpeg";
 import specialEdu8 from "@/assets/specialedu/a.png";
+import certificate1 from "@/assets/specialedu/certificate-1.jpg";
+import certificate2 from "@/assets/specialedu/certificate-2.jpg";
+import certificate3 from "@/assets/specialedu/certificate-3.jpg";
+import certificate4 from "@/assets/specialedu/certificate-4.jpg";
+import certificate5 from "@/assets/specialedu/certificate-5.jpg";
 
 export function SpecialEducation() {
   const heroSliderSettings = {
@@ -35,6 +39,42 @@ export function SpecialEducation() {
     fade: true,
     arrows: false,
   };
+
+  const certificateSliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        }
+      }
+    ]
+  };
+
+  const certificates = [
+    { id: 1, image: certificate1, title: "Professional Certification 1" },
+    { id: 2, image: certificate2, title: "Professional Certification 2" },
+    { id: 3, image: certificate3, title: "Professional Certification 3" },
+    { id: 4, image: certificate4, title: "Professional Certification 4" },
+    { id: 5, image: certificate5, title: "Professional Certification 5" },
+  ];
 
   const services = [
     { 
@@ -540,8 +580,8 @@ export function SpecialEducation() {
             Watch our students' success stories and therapy sessions
           </motion.p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {[video1, video2, video3, video4].map((video, index) => (
+          <div className="grid md:grid-cols-3 gap-8">
+            {[video1, video2, video3].map((video, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -638,6 +678,64 @@ export function SpecialEducation() {
               </ul>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Certifications & Accreditations Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <div className="w-14 h-14 rounded-lg bg-[#D4AF37] flex items-center justify-center">
+                <Award className="w-7 h-7 text-white" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">
+                Our Certifications & Accreditations
+              </h2>
+            </div>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Internationally recognized certifications and professional qualifications that ensure the highest standards of special education care
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="certificate-slider"
+          >
+            <Slider {...certificateSliderSettings}>
+              {certificates.map((cert) => (
+                <div key={cert.id} className="px-3">
+                  <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow border-2 border-gray-100">
+                    <div className="aspect-[16/10] overflow-hidden">
+                      <img 
+                        src={cert.image} 
+                        alt={cert.title}
+                        className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <p className="text-lg text-[#0F172A] font-medium bg-[#F0F9FF] border border-blue-100 rounded-lg p-6 max-w-4xl mx-auto">
+              Our team holds internationally recognized certifications from Australia and the UK, ensuring world-class special education services for your child
+            </p>
+          </motion.div>
         </div>
       </section>
 

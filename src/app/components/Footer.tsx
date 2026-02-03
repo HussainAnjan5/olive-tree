@@ -131,7 +131,7 @@ export function Footer() {
             © {new Date().getFullYear()} Olive Tree Montessori & School. All rights reserved.
           </p>
           <a
-            href="https://muhammad-hussain.vercel.app/" target="_blank"
+            href="/" 
              className="text-sm text-gray-400 hover:text-[#0EA5E9] transition-colors"
           >
             Powered by <span className="font-semibold text-[#D4AF37]">US DIGITAL PRO</span>

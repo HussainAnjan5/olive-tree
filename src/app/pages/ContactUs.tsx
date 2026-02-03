@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail, Send, Clock, Navigation } from "lucide-react";
 import { motion } from "motion/react";
-import hero from "@/assets/hero-1.jpeg";
+import headerImage from "@/assets/header-image.jpg";
 
 export function ContactUs() {
   const [formData, setFormData] = useState({
@@ -58,7 +58,7 @@ export function ContactUs() {
       {/* Hero Section */}
       <section className="relative h-[550px] overflow-hidden">
         <div className="absolute inset-0">
-          <img src={hero} alt="Contact Us Hero" className="w-full h-full object-cover" />
+          <img src={headerImage} alt="Contact Us" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a4e]/95 via-[#0f172a50]/85 to-[#0ea4e969]/80 pointer-events-none z-10" />
         <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center z-20">

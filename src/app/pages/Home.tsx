@@ -5,9 +5,9 @@ import { ChevronRight, ChevronLeft, BookOpen, Brain, Users, Trophy, Microscope, 
 import { SEO } from "@/app/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar";
 import { motion } from "motion/react";
-import hero1 from "@/assets/important.png";
+import hero1 from "@/assets/important.jpeg";
 import hero2 from "@/assets/hero-2.jpeg";
-import hero3 from "@/assets/hero-3.jpeg";
+import hero3 from "@/assets/special-hero-1.jpeg";
 import madam from "@/assets/ceo-image.png";
 import sadiakhan from "@/assets/sadiakhan.jpeg";
 import missaroosa from "@/assets/missaroosa.jpeg";
@@ -240,7 +240,7 @@ export function Home() {
                   <div className="absolute inset-0 bg-[#0EA5E9] rounded-[2rem] rotate-3 opacity-10 transform scale-105" />
                   <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
                     <img 
-                      src={hero1}
+                      src={hero3}
                       alt="Happy Children" 
                       className="w-full h-full object-cover"
                     />
@@ -310,7 +310,7 @@ export function Home() {
                   <div className="absolute inset-0 bg-amber-500 rounded-[2rem] rotate-2 opacity-10 transform scale-105" />
                   <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
                     <img 
-                      src={hero3} 
+                      src={hero1} 
                       alt="Campus" 
                       className="w-full h-full object-cover"
                     />

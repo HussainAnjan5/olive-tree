@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Send, FileCheck, Award } from "lucide-react";
 import { motion } from "motion/react";
-import hero from "@/assets/hero.jpeg";
+import headerImage from "@/assets/header-image.jpg";
 
 export function ApplyOnline() {
   const [formData, setFormData] = useState({
@@ -51,17 +51,17 @@ ${formData.hasIssue === 'yes' ? `*Issue Details:* ${formData.issueDetails}` : ''
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-[#F0F9FF] to-white">
+    <div className="min-h-screen min-h-screen bg-gradient-to-b from-[#F0F9FF] to-white">
       {/* Hero Section */}
       <section className="relative h-[500px] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              `url(${hero})`,
+              `url(${headerImage})`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0EA5E9]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a4e]/95 via-[#0f172a50]/85 to-[#0ea4e969]/80 pointer-events-none z-10" />
         <div className="relative h-full max-w-7xl mx-auto px-4 flex items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}

@@ -78,65 +78,65 @@ export function SpecialEducation() {
   ];
 
   const services = [
-    { 
-      name: "ADHD Support", 
-      icon: Brain, 
-      desc: "Specialized programs and strategies to support students with attention deficit hyperactivity disorder (ADHD), promoting focus, organization, and self-regulation skills." 
+    {
+      name: "ADHD Support",
+      icon: Brain,
+      desc: "Specialized programs and strategies to support students with attention deficit hyperactivity disorder (ADHD), promoting focus, organization, and self-regulation skills."
     },
-    { 
-      name: "Down Syndrome Programs", 
-      icon: Heart, 
-      desc: "Individualized educational plans and therapeutic interventions to support students with Down syndrome, fostering cognitive, social, and motor skill development." 
+    {
+      name: "Down Syndrome Programs",
+      icon: Heart,
+      desc: "Individualized educational plans and therapeutic interventions to support students with Down syndrome, fostering cognitive, social, and motor skill development."
     },
-    { 
-      name: "Speech Therapy", 
-      icon: Sparkles, 
-      desc: "Certified speech-language pathologists provide targeted interventions to improve communication skills, language development, and articulation." 
+    {
+      name: "Speech Therapy",
+      icon: Sparkles,
+      desc: "Certified speech-language pathologists provide targeted interventions to improve communication skills, language development, and articulation."
     },
-    { 
-      name: "Behavior Therapy", 
-      icon: Target, 
-      desc: "Evidence-based strategies and interventions to address challenging behaviors, promote positive social interactions, and enhance self-control and emotional regulation." 
+    {
+      name: "Behavior Therapy",
+      icon: Target,
+      desc: "Evidence-based strategies and interventions to address challenging behaviors, promote positive social interactions, and enhance self-control and emotional regulation."
     },
-    { 
-      name: "Play School", 
-      icon: Users, 
-      desc: "Engaging and developmentally appropriate early childhood programs designed to foster social, cognitive, and physical development through play-based learning activities." 
+    {
+      name: "Play School",
+      icon: Users,
+      desc: "Engaging and developmentally appropriate early childhood programs designed to foster social, cognitive, and physical development through play-based learning activities."
     },
-    { 
-      name: "Learning Therapy", 
-      icon: Brain, 
-      desc: "Personalized interventions and educational support to address learning difficulties, including dyslexia, dyscalculia, and other learning differences." 
+    {
+      name: "Learning Therapy",
+      icon: Brain,
+      desc: "Personalized interventions and educational support to address learning difficulties, including dyslexia, dyscalculia, and other learning differences."
     },
-    { 
-      name: "Occupational Therapy", 
-      icon: Heart, 
-      desc: "Customized interventions and activities to improve fine motor skills, sensory processing, self-care abilities, and participation in daily activities." 
+    {
+      name: "Occupational Therapy",
+      icon: Heart,
+      desc: "Customized interventions and activities to improve fine motor skills, sensory processing, self-care abilities, and participation in daily activities."
     },
-    { 
-      name: "Brain Gym", 
-      icon: Brain, 
-      desc: "Movement-based programs enhance brain function and learning capabilities." 
+    {
+      name: "Brain Gym",
+      icon: Brain,
+      desc: "Movement-based programs enhance brain function and learning capabilities."
     },
-    { 
-      name: "Cognitive Therapy", 
-      icon: Brain, 
-      desc: "Strengthening cognitive functions such as memory, attention, and problem-solving through tailored cognitive exercises." 
+    {
+      name: "Cognitive Therapy",
+      icon: Brain,
+      desc: "Strengthening cognitive functions such as memory, attention, and problem-solving through tailored cognitive exercises."
     },
-    { 
-      name: "Music Therapy", 
-      icon: Music, 
-      desc: "Leveraging the therapeutic power of music to address emotional, cognitive, and social needs." 
+    {
+      name: "Music Therapy",
+      icon: Music,
+      desc: "Leveraging the therapeutic power of music to address emotional, cognitive, and social needs."
     },
-    { 
-      name: "ASD Interventions", 
-      icon: Target, 
-      desc: "Implementing individualized plans for children with Autism Spectrum Disorder to improve social, communication, and adaptive skills." 
+    {
+      name: "ASD Interventions",
+      icon: Target,
+      desc: "Implementing individualized plans for children with Autism Spectrum Disorder to improve social, communication, and adaptive skills."
     },
-    { 
-      name: "Learning Therapies", 
-      icon: CheckCircle2, 
-      desc: "Special learning interventions to support academic achievement and skill development." 
+    {
+      name: "Learning Therapies",
+      icon: CheckCircle2,
+      desc: "Special learning interventions to support academic achievement and skill development."
     },
   ];
 
@@ -215,7 +215,7 @@ export function SpecialEducation() {
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">Chairman's Message</h2>
               </div>
-              
+
               <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
                 <p>
                   Welcome to Olive Tree Sydney Campus, a Beacon of hope, Ray of Success for all our Beloved Kids and excellence for children with special needs, slow learners, and focused kids. Our commitment lies in creating an inclusive, supportive, and stimulating environment where every child can thrive and achieve their fullest potential.
@@ -237,7 +237,7 @@ export function SpecialEducation() {
               className="order-1 lg:order-2"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] max-w-md mx-auto">
-                <img 
+                <img
                   src={cc}
                   alt="Chairman Special Education"
                   className="w-full h-full object-cover"
@@ -264,7 +264,7 @@ export function SpecialEducation() {
               className="order-1"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] max-w-md mx-auto">
-                <img 
+                <img
                   src={child}
                   alt="Special Education"
                   className="w-full h-full object-cover"
@@ -284,15 +284,15 @@ export function SpecialEducation() {
                   <Heart className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                   <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">Special Education</h2>
-                   <p className="text-[#0EA5E9] font-medium mt-1">OTM Speech Therapy program</p>
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A]">Special Education</h2>
+                  <p className="text-[#0EA5E9] font-medium mt-1">OTM Speech Therapy program</p>
                 </div>
               </div>
-              
+
               <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
-                 <p className="font-semibold text-[#0F172A] text-xl">
-                   OTM Speech Therapy program focuses on improving your child’s speech and language skills
-                 </p>
+                <p className="font-semibold text-[#0F172A] text-xl">
+                  OTM Speech Therapy program focuses on improving your child’s speech and language skills
+                </p>
                 <p className="font-medium text-[#0EA5E9]">
                   First Special Kids School in Lahore where your child achieves therapy facilities with early years education.
                 </p>
@@ -319,7 +319,7 @@ export function SpecialEducation() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-             <motion.div
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -359,17 +359,17 @@ export function SpecialEducation() {
               </div>
             </motion.div>
           </div>
-          
-           <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-12 p-8 bg-[#F0F9FF] rounded-2xl border border-blue-100 text-center"
-            >
-              <p className="text-lg text-[#0F172A] font-medium leading-relaxed">
-                At Olive Tree School, we are committed to providing holistic support and fostering the growth and development of every child, ensuring they reach their full potential in a nurturing and inclusive environment.
-              </p>
-            </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 p-8 bg-[#F0F9FF] rounded-2xl border border-blue-100 text-center"
+          >
+            <p className="text-lg text-[#0F172A] font-medium leading-relaxed">
+              At Olive Tree School, we are committed to providing holistic support and fostering the growth and development of every child, ensuring they reach their full potential in a nurturing and inclusive environment.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -377,73 +377,73 @@ export function SpecialEducation() {
       <section className="py-20 bg-[#001E3C] relative overflow-hidden">
         {/* Background Decorative Dotted Lines */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
-           <svg width="100%" height="100%">
-             <pattern id="pattern-circles" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-               <circle cx="2" cy="2" r="1" className="text-white fill-current" />
-             </pattern>
-             <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
-           </svg>
+          <svg width="100%" height="100%">
+            <pattern id="pattern-circles" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" className="text-white fill-current" />
+            </pattern>
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
+          </svg>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-              
-              {/* Card 1: ADHD Students - Light Blue */}
-              <motion.div 
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="relative mt-12 bg-[#22D3EE] rounded-[2.5rem] p-8 pb-12 text-center"
-              >
-                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full border-[6px] border-[#001E3C] overflow-hidden bg-white shadow-lg">
-                    <img src={classroomActivity} alt="ADHD Students" className="w-full h-full object-cover" />
-                 </div>
-                 <h3 className="text-2xl font-bold text-white mt-16 mb-4">ADHD Students</h3>
-                 <p className="text-white text-sm leading-relaxed opacity-95 font-medium">
-                   Olive Tree ADHD offers Behavioral interventions, counseling, and teacher training, to address the unique needs of students with Attention Deficit Hyperactivity Disorder.
-                 </p>
-                  {/* Decorative dashed line around card */}
-                 <div className="absolute top-2 bottom-2 left-2 right-2 rounded-[2.2rem] border-2 border-dashed border-white/30 pointer-events-none"></div>
-              </motion.div>
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
 
-              {/* Card 2: Down Syndrome - Purple */}
-              <motion.div 
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="relative mt-12 bg-[#A78BFA] rounded-[2.5rem] p-8 pb-12 text-center"
-              >
-                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full border-[6px] border-[#001E3C] overflow-hidden bg-white shadow-lg">
-                    <img src={artClassroom} alt="Down Syndrome" className="w-full h-full object-cover" />
-                 </div>
-                 <h3 className="text-2xl font-bold text-white mt-16 mb-4">Down Syndrome</h3>
-                 <p className="text-white text-sm leading-relaxed opacity-95 font-medium">
-                   Speech therapy, occupational therapy, and social-emotional support, to meet the unique educational and developmental needs of students with Down syndrome.
-                 </p>
-                 <div className="absolute top-2 bottom-2 left-2 right-2 rounded-[2.2rem] border-2 border-dashed border-white/30 pointer-events-none"></div>
-              </motion.div>
+            {/* Card 1: ADHD Students - Light Blue */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="relative mt-12 bg-[#22D3EE] rounded-[2.5rem] p-8 pb-12 text-center"
+            >
+              <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full border-[6px] border-[#001E3C] overflow-hidden bg-white shadow-lg">
+                <img src={classroomActivity} alt="ADHD Students" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mt-16 mb-4">ADHD Students</h3>
+              <p className="text-white text-sm leading-relaxed opacity-95 font-medium">
+                Olive Tree ADHD offers Behavioral interventions, counseling, and teacher training, to address the unique needs of students with Attention Deficit Hyperactivity Disorder.
+              </p>
+              {/* Decorative dashed line around card */}
+              <div className="absolute top-2 bottom-2 left-2 right-2 rounded-[2.2rem] border-2 border-dashed border-white/30 pointer-events-none"></div>
+            </motion.div>
 
-              {/* Card 3: Learning Therapy - Yellow/Orange */}
-              <motion.div 
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="relative mt-12 bg-[#F59E0B] rounded-[2.5rem] p-8 pb-12 text-center"
-              >
-                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full border-[6px] border-[#001E3C] overflow-hidden bg-white shadow-lg">
-                    <img src={lab} alt="Learning Therapy" className="w-full h-full object-cover" />
-                 </div>
-                 <h3 className="text-2xl font-bold text-white mt-16 mb-4">Learning Therapy</h3>
-                 <p className="text-white text-sm leading-relaxed opacity-95 font-medium">
-                   Olive Tree services offer personalized interventions and strategies to support individuals in overcoming learning challenges, enhancing cognitive skills, and achieving academic success.
-                 </p>
-                 <div className="absolute top-2 bottom-2 left-2 right-2 rounded-[2.2rem] border-2 border-dashed border-white/30 pointer-events-none"></div>
-              </motion.div>
+            {/* Card 2: Down Syndrome - Purple */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="relative mt-12 bg-[#A78BFA] rounded-[2.5rem] p-8 pb-12 text-center"
+            >
+              <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full border-[6px] border-[#001E3C] overflow-hidden bg-white shadow-lg">
+                <img src={artClassroom} alt="Down Syndrome" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mt-16 mb-4">Down Syndrome</h3>
+              <p className="text-white text-sm leading-relaxed opacity-95 font-medium">
+                Speech therapy, occupational therapy, and social-emotional support, to meet the unique educational and developmental needs of students with Down syndrome.
+              </p>
+              <div className="absolute top-2 bottom-2 left-2 right-2 rounded-[2.2rem] border-2 border-dashed border-white/30 pointer-events-none"></div>
+            </motion.div>
 
-           </div>
+            {/* Card 3: Learning Therapy - Yellow/Orange */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="relative mt-12 bg-[#F59E0B] rounded-[2.5rem] p-8 pb-12 text-center"
+            >
+              <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full border-[6px] border-[#001E3C] overflow-hidden bg-white shadow-lg">
+                <img src={lab} alt="Learning Therapy" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mt-16 mb-4">Learning Therapy</h3>
+              <p className="text-white text-sm leading-relaxed opacity-95 font-medium">
+                Olive Tree services offer personalized interventions and strategies to support individuals in overcoming learning challenges, enhancing cognitive skills, and achieving academic success.
+              </p>
+              <div className="absolute top-2 bottom-2 left-2 right-2 rounded-[2.2rem] border-2 border-dashed border-white/30 pointer-events-none"></div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
@@ -721,8 +721,8 @@ export function SpecialEducation() {
                 <div key={cert.id} className="px-3">
                   <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow border-2 border-gray-100">
                     <div className="aspect-[16/10] overflow-hidden">
-                      <img 
-                        src={cert.image} 
+                      <img
+                        src={cert.image}
                         alt={cert.title}
                         className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
                       />

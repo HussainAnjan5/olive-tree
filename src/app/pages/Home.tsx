@@ -180,14 +180,14 @@ export function Home() {
         {/* Decorative Elements */}
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-100 blur-3xl opacity-50" />
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-yellow-100 blur-3xl opacity-50" />
-        
+
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Slider {...heroSliderSettings} className="hero-slider">
             {/* Slide 1 */}
             <div className="outline-none px-1">
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div className="space-y-6 text-center lg:text-left pt-8 lg:pt-0">
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -195,7 +195,7 @@ export function Home() {
                   >
                     <Star className="w-4 h-4" /> Australian Certified
                   </motion.div>
-                  <motion.h1 
+                  <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
@@ -203,7 +203,7 @@ export function Home() {
                   >
                     Best Montessori in Lahore | <span className="text-[#0EA5E9]">Nurturing Young Minds at OliveTree Montessori</span>
                   </motion.h1>
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -211,7 +211,7 @@ export function Home() {
                   >
                     OliveTree Montessori provides a world-class environment fostering creativity, critical thinking, and character development in Lahore.
                   </motion.p>
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
@@ -231,7 +231,7 @@ export function Home() {
                     </Link>
                   </motion.div>
                 </div>
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
@@ -239,9 +239,9 @@ export function Home() {
                 >
                   <div className="absolute inset-0 bg-[#0EA5E9] rounded-[2rem] rotate-3 opacity-10 transform scale-105" />
                   <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
-                    <img 
+                    <img
                       src={hero3}
-                      alt="Happy Children" 
+                      alt="Happy Children"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -272,11 +272,11 @@ export function Home() {
                   </div>
                 </div>
                 <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-                   <div className="absolute inset-0 bg-purple-600 rounded-[2rem] -rotate-3 opacity-10 transform scale-105" />
+                  <div className="absolute inset-0 bg-purple-600 rounded-[2rem] -rotate-3 opacity-10 transform scale-105" />
                   <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
-                    <img 
+                    <img
                       src={hero2}
-                      alt="Special Education" 
+                      alt="Special Education"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -284,7 +284,7 @@ export function Home() {
               </div>
             </div>
 
-             {/* Slide 3 */}
+            {/* Slide 3 */}
             <div className="outline-none px-1">
               <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div className="space-y-6 text-center lg:text-left pt-8 lg:pt-0">
@@ -309,9 +309,9 @@ export function Home() {
                 <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
                   <div className="absolute inset-0 bg-amber-500 rounded-[2rem] rotate-2 opacity-10 transform scale-105" />
                   <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
-                    <img 
-                      src={hero1} 
-                      alt="Campus" 
+                    <img
+                      src={hero1}
+                      alt="Campus"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -333,9 +333,9 @@ export function Home() {
               className="order-2 lg:order-1"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                <img 
-                  src={madam} 
-                  alt="CEO Miss Sana Murtaza" 
+                <img
+                  src={madam}
+                  alt="CEO Miss Sana Murtaza"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
@@ -344,7 +344,7 @@ export function Home() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -360,13 +360,13 @@ export function Home() {
                   <p className="text-gray-500 font-medium tracking-wide text-sm uppercase mt-1">Leading with Vision</p>
                 </div>
               </div>
-              
+
               <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
                 <p className="italic text-gray-800 font-medium">
                   "Welcome to OliveTree Montessori Lahore, where we proudly offer a distinguished early years education certified by Australian and UK standards."
                 </p>
                 <p>
-                   At OliveTree Montessori, we inspire and empower students to be lifelong learners, critical thinkers, and valuable global citizens. Our Montessori curriculum fosters strong, independent students who uphold Pakistani values and excel academically.
+                  At OliveTree Montessori, we inspire and empower students to be lifelong learners, critical thinkers, and valuable global citizens. Our Montessori curriculum fosters strong, independent students who uphold Pakistani values and excel academically.
                 </p>
                 <p>
                   We create a nurturing environment promoting academic excellence and character development, ensuring every child acquires the skills for lifelong success. Our students explore their interests and objectives, gaining a comprehensive understanding of the world.
@@ -575,7 +575,7 @@ export function Home() {
             className="mb-12"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#0EA5E9]/10">
-              <img src={specialEdu6} alt="Special Education" className="w-full h-auto object-cover" style={{maxHeight:'600px'}} />
+              <img src={specialEdu6} alt="Special Education" className="w-full h-auto object-cover" style={{ maxHeight: '600px' }} />
             </div>
           </motion.div>
         </div>
@@ -663,12 +663,12 @@ export function Home() {
                       <AvatarFallback>{feedback.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                     </Avatar>
                     <div>
-                        <h4 className="font-bold text-white text-xl">{feedback.name}</h4>
-                         <div className="flex justify-center gap-1 mt-2">
-                            {[...Array(feedback.rating)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
-                            ))}
-                        </div>
+                      <h4 className="font-bold text-white text-xl">{feedback.name}</h4>
+                      <div className="flex justify-center gap-1 mt-2">
+                        {[...Array(feedback.rating)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -712,7 +712,7 @@ export function Home() {
               {
                 title: "Australian Montessori Certification",
                 image: cert1,
-              },,
+              }, ,
               {
                 title: "UK Education Standards",
                 image: cert2,

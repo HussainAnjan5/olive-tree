@@ -170,9 +170,9 @@ export function Home() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Best School in Lahore - Olive Tree Montessori | Australian Certified Montessori"
-        description="OliveTree Montessori is an Australian and UK-certified Montessori & School in Lahore, Pakistan. Best Montessori & School offering world-class early childhood education, special education, speech therapy, and ADHD support."
-        keywords="Best School in Lahore, Montessori Lahore, Best Montessori & School Lahore, Speech therapy Lahore, ADHD kids school, Australian Montessori Pakistan"
+        title="Best Montessori in Lahore | Nurturing Young Minds at OliveTree Montessori"
+        description="The best Montessori in Lahore is OliveTree Montessori School. School provide individualized learning, holistic development, and expert guidance to help your child thrive socially, emotionally, and academically."
+        keywords="Best Montessori in Lahore"
       />
 
       {/* Hero Section */}
@@ -201,7 +201,7 @@ export function Home() {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#0F172A] leading-tight"
                   >
-                    Australian Certified <span className="text-[#0EA5E9]">Montessori in Lahore</span>
+                    Best Montessori in Lahore | <span className="text-[#0EA5E9]">Nurturing Young Minds at OliveTree Montessori</span>
                   </motion.h1>
                   <motion.p 
                     initial={{ opacity: 0, y: 20 }}

@@ -26,6 +26,7 @@ import certificate2 from "@/assets/specialedu/certificate-2.jpg";
 import certificate3 from "@/assets/specialedu/certificate-3.jpg";
 import certificate4 from "@/assets/specialedu/certificate-4.jpg";
 import certificate5 from "@/assets/specialedu/certificate-5.jpg";
+import { SEO } from "@/app/components/SEO";
 
 export function SpecialEducation() {
   const heroSliderSettings = {
@@ -149,6 +150,12 @@ export function SpecialEducation() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Olive Tree Montessori | Special Education School for Learning Support"
+        description="Olive Tree Montessori is a leading special education school dedicated to supporting children with learning difficulties through personalized teaching, Montessori methods, and a nurturing environment for growth and success."
+        keywords="special education school"
+      />
+
       {/* Hero Section */}
       <section className="relative h-[500px] md:h-[600px] overflow-hidden">
         <div className="absolute inset-0">
@@ -173,7 +180,7 @@ export function SpecialEducation() {
               <span className="text-white text-sm font-medium">Sydney Campus</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Special Education Programs
+              Special Education School at Olive Tree Montessori - Empowering Every Child
             </h1>
             <p className="text-xl md:text-2xl mb-4 text-gray-200">
               Speech Therapy, Down Syndrome & ADHD Support

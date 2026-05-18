@@ -51,6 +51,11 @@ export function ContactUs() {
       address: "Plot 513, Block G1, Block G1 Block G 1 Phase 1 Johar Town, Lahore, Punjab 54700",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.3524662787744!2d74.27134931543738!3d31.540366981346833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904ec87c3fae9%3A0x8c3f8e8c3f8e8c3f!2sJohar%20Town%2C%20Lahore!5e0!3m2!1sen!2spk!4v1234567890125",
     },
+    {
+      name: "Cavalry Ground Extension",
+      address: "House No. 363, Street 6, Cavalry Ground Extension, Lahore Cantonment",
+      mapUrl: "https://maps.google.com/maps?q=House%20No.%20363%2C%20Street%206%2C%20Cavalry%20Ground%20Extension%2C%20Lahore%20Cantonment&output=embed",
+    },
   ];
 
   return (
@@ -91,7 +96,7 @@ export function ContactUs() {
                 <MapPin className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-bold text-[#0F172A] mb-2 text-lg">Location</h3>
-              <p className="text-gray-600 text-sm">Johar Town, Lahore</p>
+              <p className="text-gray-600 text-sm">Johar Town & Cavalry Ground, Lahore</p>
             </motion.div>
 
             <motion.div
@@ -253,7 +258,7 @@ export function ContactUs() {
                   <h3 className="text-3xl font-bold">Find Us On Google</h3>
                 </div>
                 <p className="text-[#F0F9FF] mb-6 text-lg">
-                  Visit any of our three campuses located in Johar Town, Lahore. We welcome parents to schedule a tour and see our world-class facilities.
+                  Visit any of our four campuses in Johar Town and Cavalry Ground Extension, Lahore Cantonment. We welcome parents to schedule a tour and see our world-class facilities.
                 </p>
               </div>
 

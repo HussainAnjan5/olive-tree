@@ -104,6 +104,10 @@ export function Footer() {
                 <p className="font-semibold text-white mb-1">Johar Town Campus - G Block</p>
                 <p>Plot 513, Block G1, Johar Town, Lahore</p>
               </div>
+              <div>
+                <p className="font-semibold text-white mb-1">Cavalry Ground Extension</p>
+                <p>House No. 363, Street 6, Cavalry Ground Extension, Lahore Cantonment</p>
+              </div>
               <div className="pt-2 space-y-2">
                 <p>
                   <a href="tel:+923028815435" className="hover:text-[#0EA5E9] transition-colors">
